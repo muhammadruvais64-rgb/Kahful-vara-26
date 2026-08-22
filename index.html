@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="ml">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>കഹ്ഫുൽ വറാ 2026</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Noto Sans Malayalam',sans-serif;
+    background:
+    radial-gradient(circle at top,#fffdf8 0%,#f5f0e8 45%,#eee8df 100%);
+    color:#17231f;
+    min-height:100vh;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:30px 20px;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    background:rgba(38,91,75,.08);
+    filter:blur(40px);
+    top:-100px;
+    right:-100px;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    background:rgba(185,145,70,.07);
+    filter:blur(50px);
+    bottom:-100px;
+    left:-100px;
+}
+
+.main-logo{
+    width:min(78vw,430px);
+    max-height:430px;
+    object-fit:contain;
+
+    /* Black logo → premium light tone */
+    filter:invert(1) brightness(.55);
+
+    position:relative;
+    z-index:2;
+
+    animation:logoIn 1.5s ease;
+}
+
+@keyframes logoIn{
+    from{
+        opacity:0;
+        transform:scale(.8);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+.swipe-text{
+    margin-top:20px;
+    font-size:13px;
+    letter-spacing:2px;
+    color:#69746f;
+    animation:updown 1.5s infinite;
+}
+
+@keyframes updown{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(7px)}
+}
+
+.arrow{
+    font-size:22px;
+    margin-top:8px;
+    color:#315d50;
+}
+
+/* ================= HOME ================= */
+
+.home{
+    padding:70px 18px;
+    max-width:1000px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.section-title h1{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(28px,7vw,48px);
+    color:#203c34;
+}
+
+.section-title p{
+    margin-top:8px;
+    color:#707b76;
+}
+
+.dars-box{
+    background:rgba(255,255,255,.72);
+    border:1px solid rgba(40,70,60,.12);
+    border-radius:30px;
+    padding:35px 20px;
+    text-align:center;
+    box-shadow:0 20px 60px rgba(40,50,45,.10);
+    backdrop-filter:blur(15px);
+}
+
+.dars-logo{
+    width:min(65vw,300px);
+    height:auto;
+    object-fit:contain;
+}
+
+.dars-name{
+    margin-top:18px;
+    font-family:'Playfair Display',serif;
+    font-size:15px;
+    letter-spacing:2px;
+    color:#52635d;
+}
+
+/* ================= RESULT BUTTON ================= */
+
+.result-section{
+    margin-top:55px;
+}
+
+.result-button{
+    width:100%;
+    border:none;
+    border-radius:22px;
+    padding:25px 20px;
+    background:linear-gradient(135deg,#234d40,#376f5c);
+    color:white;
+    box-shadow:0 15px 35px rgba(35,77,64,.25);
+    cursor:pointer;
+    transition:.3s;
+}
+
+.result-button:hover{
+    transform:translateY(-4px);
+}
+
+.result-button h2{
+    font-size:25px;
+}
+
+.result-button span{
+    display:block;
+    margin-top:6px;
+    opacity:.8;
+}
+
+/* ================= RESULT PAGE ================= */
+
+#resultPage{
+    display:none;
+    padding:40px 16px 80px;
+    max-width:1000px;
+    margin:auto;
+}
+
+.back{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    border:none;
+    background:white;
+    border:1px solid #dfe4df;
+    padding:10px 17px;
+    border-radius:50px;
+    cursor:pointer;
+    color:#315449;
+    margin-bottom:25px;
+}
+
+.page-title{
+    text-align:center;
+    font-family:'Playfair Display',serif;
+    font-size:38px;
+    color:#203c34;
+    margin-bottom:25px;
+}
+
+/* ================= TABS ================= */
+
+.tabs{
+    display:flex;
+    background:#e7e9e4;
+    padding:5px;
+    border-radius:16px;
+    margin-bottom:25px;
+}
+
+.tab{
+    flex:1;
+    border:none;
+    background:transparent;
+    padding:14px;
+    border-radius:12px;
+    font-size:16px;
+    font-weight:600;
+    color:#65706b;
+    cursor:pointer;
+}
+
+.tab.active{
+    background:white;
+    color:#234d40;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+/* ================= CATEGORY ================= */
+
+.filter-box{
+    background:white;
+    border-radius:18px;
+    padding:18px;
+    margin-bottom:25px;
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
+}
+
+.filter-box label{
+    display:block;
+    font-size:13px;
+    color:#727c77;
+    margin-bottom:8px;
+}
+
+select{
+    width:100%;
+    padding:14px;
+    border:1px solid #dce2dd;
+    border-radius:12px;
+    background:#fafbf9;
+    font-family:inherit;
+    font-size:15px;
+    color:#263c35;
+    outline:none;
+}
+
+/* ================= COMPETITIONS ================= */
+
+.competition-list{
+    display:grid;
+    gap:14px;
+}
+
+.competition{
+    background:white;
+    border:1px solid #e5e8e4;
+    border-radius:18px;
+    padding:18px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+    box-shadow:0 7px 22px rgba(0,0,0,.05);
+    transition:.25s;
+}
+
+.competition:hover{
+    transform:translateY(-2px);
+}
+
+.comp-info h3{
+    font-size:17px;
+    color:#253a33;
+}
+
+.comp-info p{
+    font-size:12px;
+    color:#78827e;
+    margin-top:5px;
+}
+
+.zone{
+    white-space:nowrap;
+    padding:7px 12px;
+    border-radius:30px;
+    background:#edf4f0;
+    color:#32604f;
+    font-size:11px;
+    font-weight:600;
+}
+
+/* ================= GALLERY ================= */
+
+.gallery{
+    display:none;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+}
+
+.gallery-item{
+    height:170px;
+    border-radius:16px;
+    background:linear-gradient(135deg,#dfe7e2,#f5eee5);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#718079;
+    font-size:13px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    text-align:center;
+    padding:35px 15px;
+    color:#78827e;
+    font-size:12px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:600px){
+
+    .hero{
+        min-height:100svh;
+    }
+
+    .main-logo{
+        width:85vw;
+    }
+
+    .home{
+        padding-top:55px;
+    }
+
+    .competition{
+        align-items:flex-start;
+    }
+
+    .comp-info h3{
+        font-size:15px;
+    }
+
+    .zone{
+        font-size:10px;
+    }
+
+    .gallery-item{
+        height:130px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ================= OPENING ================= -->
+
+<section class="hero">
+
+    <img
+        src="main-logo.png"
+        class="main-logo"
+        alt="Nabidina 2026">
+
+    <div class="swipe-text">
+        SWIPE UP
+    </div>
+
+    <div class="arrow">
+        ↓
+    </div>
+
+</section>
+
+
+<!-- ================= HOME ================= -->
+
+<section class="home" id="home">
+
+    <div class="section-title">
+
+        <h1>കഹ്ഫുൽ വറാ 2026</h1>
+
+        <p>BADRUL HUDA DA'AWA DARS</p>
+
+    </div>
+
+
+    <div class="dars-box">
+
+        <img
+            src="dars-logo.png"
+            class="dars-logo"
+            alt="Badrul Huda Da'awa Dars">
+
+        <div class="dars-name">
+            BADRUL HUDA DA'AWA DARS
+        </div>
+
+    </div>
+
+
+    <div class="result-section">
+
+        <button class="result-button" onclick="openResults()">
+
+            <h2>Results</h2>
+
+            <span>View Competition Results →</span>
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= RESULT PAGE ================= -->
+
+<section id="resultPage">
+
+    <button class="back" onclick="goHome()">
+        ← Back
+    </button>
+
+    <div class="page-title">
+        Results
+    </div>
+
+
+    <!-- TWO SLIDES -->
+
+    <div class="tabs">
+
+        <button
+            class="tab active"
+            onclick="showTab('results',this)">
+            Result
+        </button>
+
+        <button
+            class="tab"
+            onclick="showTab('gallery',this)">
+            Gallery
+        </button>
+
+    </div>
+
+
+    <!-- RESULT TAB -->
+
+    <div id="resultsTab">
+
+        <div class="filter-box">
+
+            <label>Competition Category</label>
+
+            <select id="category" onchange="filterCompetitions()">
+
+                <option value="all">All Competitions</option>
+
+                <option value="high">High Zone</option>
+
+                <option value="mid">Mid Zone</option>
+
+                <option value="low">Low Zone</option>
+
+                <option value="general">General</option>
+
+            </select>
+
+        </div>
+
+
+        <div class="competition-list">
+
+
+            <!-- HIGH ZONE -->
+
+            <div class="competition" data-zone="high">
+
+                <div class="comp-info">
+                    <h3>ഖിറാഅത്ത്</h3>
+                    <p>Stage • High Zone</p>
+                </div>
+
+                <div class="zone">HIGH</div>
+
+            </div>
+
+
+            <div class="competition" data-zone="high">
+
+                <div class="comp-info">
+                    <h3>പ്രഭാഷണം</h3>
+                    <p>Stage • High Zone</p>
+                </div>
+
+                <div class="zone">HIGH</div>
+
+            </div>
+
+
+            <div class="competition" data-zone="high">
+
+                <div class="comp-info">
+                    <h3>പ്രസംഗം</h3>
+                    <p>Stage • High Zone</p>
+                </div>
+
+                <div class="zone">HIGH</div>
+
+            </div>
+
+
+            <!-- MID -->
+
+            <div class="competition" data-zone="mid">
+
+                <div class="comp-info">
+                    <h3>ഖിറാഅത്ത്</h3>
+                    <p>Off Stage • Mid Zone</p>
+                </div>
+
+                <div class="zone">MID</div>
+
+            </div>
+
+
+            <div class="competition" data-zone="mid">
+
+                <div class="comp-info">
+                    <h3>എക്സാം</h3>
+                    <p>Off Stage • Mid Zone</p>
+                </div>
+
+                <div class="zone">MID</div>
+
+            </div>
+
+
+            <!-- LOW -->
+
+            <div class="competition" data-zone="low">
+
+                <div class="comp-info">
+                    <h3>മദ്ഹ് ഗാനം</h3>
+                    <p>Stage • Low Zone</p>
+                </div>
+
+                <div class="zone">LOW</div>
+
+            </div>
+
+
+            <div class="competition" data-zone="low">
+
+                <div class="comp-info">
+                    <h3>പ്രഭാഷണം</h3>
+                    <p>Stage • Low Zone</p>
+                </div>
+
+                <div class="zone">LOW</div>
+
+            </div>
+
+
+            <div class="competition" data-zone="low">
+
+                <div class="comp-info">
+                    <h3>ലാംഗ്വേജ് ഗെയിം</h3>
+                    <p>Off Stage • Low Zone</p>
+                </div>
+
+                <div class="zone">LOW</div>
+
+            </div>
+
+
+            <!-- GENERAL -->
+
+            <div class="competition" data-zone="general">
+
+                <div class="comp-info">
+                    <h3>മോട്ടർടാങ്ക്</h3>
+                    <p>Off Stage • General</p>
+                </div>
+
+                <div class="zone">GENERAL</div>
+
+            </div>
+
+
+            <div class="competition" data-zone="general">
+
+                <div class="comp-info">
+                    <h3>Essay Writing</h3>
+                    <p>Off Stage • General</p>
+                </div>
+
+                <div class="zone">GENERAL</div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- GALLERY TAB -->
+
+    <div id="galleryTab" class="gallery">
+
+        <div class="gallery-grid">
+
+            <div class="gallery-item">
+                Gallery Photo 01
+            </div>
+
+            <div class="gallery-item">
+                Gallery Photo 02
+            </div>
+
+            <div class="gallery-item">
+                Gallery Photo 03
+            </div>
+
+            <div class="gallery-item">
+                Gallery Photo 04
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+    © 2026 • Badrul Huda Da'awa Dars
+</footer>
+
+
+<script>
+
+/* ================= OPEN RESULTS ================= */
+
+function openResults(){
+
+    document.getElementById("home").style.display="none";
+
+    document.getElementById("resultPage").style.display="block";
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+
+
+/* ================= BACK ================= */
+
+function goHome(){
+
+    document.getElementById("resultPage").style.display="none";
+
+    document.getElementById("home").style.display="block";
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+
+
+/* ================= TABS ================= */
+
+function showTab(tab,button){
+
+    document.querySelectorAll(".tab")
+    .forEach(x=>x.classList.remove("active"));
+
+    button.classList.add("active");
+
+
+    if(tab==="results"){
+
+        document.getElementById("resultsTab").style.display="block";
+
+        document.getElementById("galleryTab").style.display="none";
+
+    }
+
+    else{
+
+        document.getElementById("resultsTab").style.display="none";
+
+        document.getElementById("galleryTab").style.display="block";
+
+    }
+
+}
+
+
+/* ================= CATEGORY FILTER ================= */
+
+function filterCompetitions(){
+
+    const selected =
+        document.getElementById("category").value;
+
+    document
+    .querySelectorAll(".competition")
+    .forEach(item=>{
+
+        const zone =
+            item.getAttribute("data-zone");
+
+        if(selected==="all" || selected===zone){
+
+            item.style.display="flex";
+
+        }
+
+        else{
+
+            item.style.display="none";
+
+        }
+
+    });
+
+}
+
+</script>
+
+</body>
+</html>
