@@ -1,0 +1,2894 @@
+<!DOCTYPE html>
+<html lang="ml">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>കഹ്ഫുൽ വറാ 2026</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Noto Sans Malayalam',sans-serif;
+  background:#ffffff;
+  color:#173f33;
+  overflow-x:hidden;
+}
+
+button,
+select,
+input{
+  font:inherit;
+}
+
+button{
+  cursor:pointer;
+}
+
+/* =========================
+   OPENING PAGE
+========================= */
+
+#opening{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  overflow:hidden;
+
+  background:#071c16;
+
+  transition:
+    transform 1s cubic-bezier(.77,0,.18,1);
+}
+
+.opening-bg{
+  position:absolute;
+  inset:-40px;
+
+  background:url("main-logo.png")
+    center/cover no-repeat;
+
+  filter:blur(35px);
+
+  opacity:.18;
+
+  transform:scale(1.15);
+}
+
+.opening-overlay{
+  position:absolute;
+  inset:0;
+
+  background:rgba(0,0,0,.52);
+}
+
+.opening-content{
+  position:relative;
+  z-index:2;
+
+  text-align:center;
+}
+
+.opening-logo{
+  width:min(78vw,430px);
+  max-height:65vh;
+
+  object-fit:contain;
+}
+
+.swipe{
+  margin-top:30px;
+
+  color:rgba(255,255,255,.82);
+
+  font-family:Arial,sans-serif;
+
+  font-size:10px;
+
+  letter-spacing:4px;
+}
+
+.swipe-line{
+  width:1px;
+  height:45px;
+
+  background:
+    linear-gradient(
+      transparent,
+      white,
+      transparent
+    );
+
+  margin:0 auto 12px;
+
+  animation:swipe 1.6s infinite;
+}
+
+@keyframes swipe{
+
+  0%{
+    transform:translateY(-8px);
+    opacity:0;
+  }
+
+  50%{
+    opacity:1;
+  }
+
+  100%{
+    transform:translateY(8px);
+    opacity:0;
+  }
+
+}
+
+
+/* =========================
+   COMMON PAGE
+========================= */
+
+.page{
+  display:none;
+  min-height:100vh;
+}
+
+.page.active{
+  display:block;
+
+  animation:
+    pageIn .65s ease;
+}
+
+@keyframes pageIn{
+
+  from{
+    opacity:0;
+    transform:translateY(18px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+.gold-line{
+  height:1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #c8a85b,
+      transparent
+    );
+}
+
+
+/* =========================
+   HOME PAGE
+========================= */
+
+#home{
+
+  background:#fff;
+
+  min-height:100vh;
+
+  padding:
+    28px
+    16px
+    60px;
+}
+
+.home-wrapper{
+
+  width:min(1050px,94%);
+
+  margin:auto;
+}
+
+.brand-box{
+
+  position:relative;
+
+  min-height:410px;
+
+  border-radius:
+    0
+    0
+    42px
+    42px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #164b3d,
+      #0d352b
+    );
+
+  box-shadow:
+
+    0 25px 50px
+    rgba(17,65,52,.22),
+
+    inset 0 1px 0
+    rgba(255,255,255,.14);
+
+  padding:
+    45px
+    25px
+    38px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:center;
+
+  justify-content:center;
+
+  overflow:hidden;
+}
+
+.brand-box:before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:12px;
+
+  border:
+    1px solid
+    rgba(210,175,92,.7);
+
+  border-radius:
+    0
+    0
+    32px
+    32px;
+
+  pointer-events:none;
+}
+
+.brand-box:after{
+
+  content:"";
+
+  position:absolute;
+
+  width:180px;
+  height:180px;
+
+  border-radius:50%;
+
+  background:
+    rgba(216,193,122,.08);
+
+  filter:blur(5px);
+
+  top:-90px;
+  right:-70px;
+}
+
+.brand-logos{
+
+  width:100%;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  gap:
+    clamp(
+      20px,
+      7vw,
+      80px
+    );
+
+  position:relative;
+
+  z-index:2;
+}
+
+.logo-card{
+
+  width:42%;
+
+  max-width:320px;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+}
+
+.logo-card img{
+
+  width:100%;
+
+  max-height:230px;
+
+  object-fit:contain;
+}
+
+.brand-description{
+
+  position:relative;
+
+  z-index:2;
+
+  margin-top:32px;
+
+  text-align:center;
+
+  color:#fff;
+
+  font-family:
+    'Playfair Display',
+    serif;
+
+  font-size:
+    clamp(
+      13px,
+      3vw,
+      20px
+    );
+
+  letter-spacing:1.2px;
+}
+
+.brand-description span{
+
+  color:#d9c17a;
+}
+
+.home-result{
+
+  margin-top:35px;
+
+  display:flex;
+
+  justify-content:flex-start;
+}
+
+.result-home-button{
+
+  border:
+    1px solid
+    rgba(200,168,91,.7);
+
+  color:#fff;
+
+  background:
+    linear-gradient(
+      145deg,
+      #174f40,
+      #0d362c
+    );
+
+  padding:
+    18px
+    38px;
+
+  border-radius:18px;
+
+  box-shadow:
+
+    0 15px 30px
+    rgba(16,64,51,.2),
+
+    inset 0 1px 0
+    rgba(255,255,255,.12);
+
+  font-family:
+    'Playfair Display',
+    serif;
+
+  font-size:21px;
+
+  transition:.3s;
+}
+
+.result-home-button:hover{
+
+  transform:
+    translateY(-4px);
+}
+
+.result-home-button small{
+
+  display:block;
+
+  margin-top:3px;
+
+  font-family:Arial,sans-serif;
+
+  font-size:9px;
+
+  letter-spacing:2px;
+
+  color:#d9c17a;
+}
+
+
+/* =========================
+   RESULT / GALLERY PAGE
+========================= */
+
+#mainPage{
+
+  background:
+    linear-gradient(
+      180deg,
+      #f7fbf9,
+      #fff 35%,
+      #f5f8f6
+    );
+
+  padding:
+    22px
+    16px
+    60px;
+}
+
+.main-wrapper{
+
+  width:min(1050px,94%);
+
+  margin:auto;
+}
+
+.back-button{
+
+  border:
+    1px solid
+    #d4ddd8;
+
+  background:white;
+
+  color:#285446;
+
+  padding:
+    10px
+    18px;
+
+  border-radius:50px;
+
+  box-shadow:
+    0 6px 16px
+    rgba(0,0,0,.06);
+}
+
+.main-heading{
+
+  text-align:center;
+
+  padding:
+    35px
+    0
+    25px;
+}
+
+.main-heading h1{
+
+  font-family:
+    'Playfair Display',
+    serif;
+
+  font-size:
+    clamp(
+      32px,
+      7vw,
+      55px
+    );
+
+  color:#173f33;
+}
+
+.main-heading p{
+
+  margin-top:7px;
+
+  color:#76827c;
+
+  font-size:12px;
+
+  letter-spacing:2px;
+}
+
+
+/* =========================
+   RESULT / GALLERY TABS
+========================= */
+
+.tabs{
+
+  width:min(620px,100%);
+
+  margin:
+    0
+    auto
+    30px;
+
+  padding:5px;
+
+  display:flex;
+
+  background:#e5eee9;
+
+  border-radius:20px;
+
+  box-shadow:
+    inset
+    0 2px 5px
+    rgba(0,0,0,.07);
+}
+
+.tab{
+
+  flex:1;
+
+  border:none;
+
+  padding:15px;
+
+  border-radius:15px;
+
+  background:transparent;
+
+  color:#6d7974;
+
+  font-size:15px;
+
+  font-weight:600;
+
+  transition:.3s;
+}
+
+.tab.active{
+
+  background:#164b3d;
+
+  color:white;
+
+  box-shadow:
+    0 8px 18px
+    rgba(22,75,61,.2);
+}
+
+
+/* =========================
+   RESULT LIST
+========================= */
+
+.result-area{
+
+  padding-bottom:30px;
+}
+
+.category-box{
+
+  background:white;
+
+  padding:18px;
+
+  border-radius:20px;
+
+  box-shadow:
+    0 12px 30px
+    rgba(25,70,55,.07);
+
+  border:
+    1px solid
+    #e0e8e3;
+
+  margin-bottom:25px;
+}
+
+.category-box label{
+
+  display:block;
+
+  font-size:12px;
+
+  color:#6f7b76;
+
+  margin-bottom:8px;
+}
+
+.category-select{
+
+  width:100%;
+
+  border:
+    1px solid
+    #d7e0db;
+
+  background:#fafcfb;
+
+  border-radius:13px;
+
+  padding:14px;
+
+  color:#244c40;
+
+  font-size:14px;
+}
+
+.competition-list{
+
+  display:grid;
+
+  gap:13px;
+}
+
+.competition{
+
+  position:relative;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  gap:15px;
+
+  background:white;
+
+  padding:20px;
+
+  border-radius:18px;
+
+  border:
+    1px solid
+    #e1e8e4;
+
+  box-shadow:
+    0 9px 25px
+    rgba(20,65,52,.065);
+
+  transition:.3s;
+}
+
+.competition:hover{
+
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 16px 30px
+    rgba(20,65,52,.12);
+}
+
+.competition-info{
+
+  min-width:0;
+}
+
+.stage-label{
+
+  display:block;
+
+  color:#8b9691;
+
+  font-family:Arial,sans-serif;
+
+  font-size:9px;
+
+  letter-spacing:1.5px;
+
+  text-transform:uppercase;
+
+  margin-bottom:5px;
+}
+
+.competition-name{
+
+  font-size:17px;
+
+  color:#24483d;
+}
+
+.zone-badge{
+
+  flex-shrink:0;
+
+  background:#edf5f1;
+
+  color:#28604e;
+
+  padding:
+    7px
+    12px;
+
+  border-radius:50px;
+
+  font-family:Arial,sans-serif;
+
+  font-size:9px;
+
+  letter-spacing:1px;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery-area{
+
+  display:none;
+}
+
+.gallery-live{
+
+  background:white;
+
+  border:
+    1px solid
+    #e0e8e3;
+
+  border-radius:22px;
+
+  padding:20px;
+
+  box-shadow:
+    0 12px 30px
+    rgba(25,70,55,.07);
+
+  margin-bottom:24px;
+}
+
+.live-title{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:9px;
+
+  margin-bottom:15px;
+
+  font-weight:700;
+
+  color:#173f33;
+}
+
+.live-dot{
+
+  width:9px;
+  height:9px;
+
+  border-radius:50%;
+
+  background:#d14d4d;
+
+  box-shadow:
+    0 0 0 5px
+    rgba(209,77,77,.12);
+}
+
+.youtube-row{
+
+  display:flex;
+
+  gap:10px;
+}
+
+.youtube-input{
+
+  flex:1;
+
+  min-width:0;
+
+  border:
+    1px solid
+    #d7e0db;
+
+  border-radius:13px;
+
+  padding:13px;
+
+  outline:none;
+}
+
+.youtube-button{
+
+  border:
+    1px solid
+    rgba(200,168,91,.7);
+
+  background:#164b3d;
+
+  color:white;
+
+  padding:
+    13px
+    18px;
+
+  border-radius:13px;
+}
+
+.gallery-upload{
+
+  background:white;
+
+  border:
+    1px solid
+    #e0e8e3;
+
+  border-radius:22px;
+
+  padding:20px;
+
+  box-shadow:
+    0 12px 30px
+    rgba(25,70,55,.07);
+}
+
+.upload-title{
+
+  font-weight:700;
+
+  margin-bottom:8px;
+}
+
+.upload-note{
+
+  font-size:12px;
+
+  color:#78847e;
+
+  margin-bottom:14px;
+}
+
+.photo-input{
+
+  width:100%;
+
+  border:
+    1px dashed
+    #c8a85b;
+
+  border-radius:15px;
+
+  padding:16px;
+
+  background:#fffdf7;
+}
+
+.photo-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:12px;
+
+  margin-top:18px;
+}
+
+.photo-grid img{
+
+  width:100%;
+
+  aspect-ratio:1/1;
+
+  object-fit:cover;
+
+  border-radius:15px;
+
+  border:
+    1px solid
+    #e4d6ad;
+}/* =========================
+   COMPETITION RESULT PAGE
+========================= */
+
+#competitionPage{
+
+  background:
+    linear-gradient(
+      145deg,
+      #f4f8ff,
+      #ffffff
+    );
+
+  min-height:100vh;
+}
+
+.competition-result-wrapper{
+
+  width:min(950px,92%);
+
+  margin:auto;
+
+  padding:
+    25px
+    0
+    80px;
+}
+
+.blue-card{
+
+  position:relative;
+
+  margin-top:25px;
+
+  padding:
+    35px
+    20px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #0b376d,
+      #071f43
+    );
+
+  color:white;
+
+  border-radius:28px;
+
+  box-shadow:
+    0 25px 55px
+    rgba(8,47,91,.25);
+
+  overflow:hidden;
+}
+
+.blue-card:after{
+
+  content:"";
+
+  position:absolute;
+
+  inset:12px;
+
+  border:
+    1px solid
+    rgba(210,175,92,.75);
+
+  border-radius:20px;
+
+  pointer-events:none;
+}
+
+
+/* =========================
+   DOWNLOAD BUTTON
+========================= */
+
+.download-button{
+
+  position:absolute;
+
+  z-index:3;
+
+  top:22px;
+
+  right:22px;
+
+  border:
+    1px solid
+    rgba(255,255,255,.35);
+
+  background:
+    rgba(255,255,255,.12);
+
+  color:white;
+
+  padding:
+    9px
+    14px;
+
+  border-radius:50px;
+
+  font-size:11px;
+
+  transition:.3s;
+}
+
+.download-button:hover{
+
+  background:
+    rgba(255,255,255,.2);
+
+  transform:
+    translateY(-2px);
+}
+
+
+/* =========================
+   COMPETITION TITLE
+========================= */
+
+.comp-result-title{
+
+  position:relative;
+
+  z-index:2;
+
+  text-align:center;
+
+  font-family:
+    'Playfair Display',
+    serif;
+
+  font-size:
+    clamp(
+      27px,
+      7vw,
+      45px
+    );
+
+  padding:
+    35px
+    70px
+    20px;
+}
+
+
+/* =========================
+   RESULT PHOTO PREVIEW
+========================= */
+
+.result-photo-area{
+
+  position:relative;
+
+  z-index:2;
+
+  margin:
+    18px
+    auto
+    0;
+
+  width:min(
+    850px,
+    100%
+  );
+
+  text-align:center;
+}
+
+.preview-label{
+
+  color:#e4cc82;
+
+  font-family:Arial,sans-serif;
+
+  font-size:10px;
+
+  letter-spacing:2px;
+
+  margin-bottom:10px;
+
+  text-transform:uppercase;
+}
+
+
+/*
+   RESULT PHOTO
+
+   Upload ചെയ്ത photo
+   ഈ separate competition page-ൽ
+   വലിയ preview ആയി കാണും.
+*/
+
+.result-photo{
+
+  display:none;
+
+  width:100%;
+
+  max-height:78vh;
+
+  object-fit:contain;
+
+  border-radius:18px;
+
+  border:
+    1px solid
+    rgba(228,204,130,.55);
+
+  box-shadow:
+    0 18px 45px
+    rgba(0,0,0,.28);
+
+  background:#ffffff;
+}
+
+
+/* =========================
+   NOT UPLOADED MESSAGE
+========================= */
+
+.not-uploaded{
+
+  min-height:220px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  padding:30px 10px;
+
+  color:#dce8f7;
+
+  font-size:14px;
+
+  border:
+    1px dashed
+    rgba(255,255,255,.25);
+
+  border-radius:18px;
+
+  background:
+    rgba(255,255,255,.05);
+}
+
+
+/* =========================
+   RESULT PHOTO UPLOAD
+========================= */
+
+.result-upload-box{
+
+  position:relative;
+
+  z-index:2;
+
+  margin:
+    20px
+    auto
+    0;
+
+  max-width:600px;
+
+  background:
+    rgba(255,255,255,.09);
+
+  border:
+    1px dashed
+    rgba(255,255,255,.35);
+
+  border-radius:16px;
+
+  padding:16px;
+
+  text-align:center;
+}
+
+.result-upload-box p{
+
+  font-size:11px;
+
+  color:#dce8f7;
+
+  margin-bottom:10px;
+}
+
+.result-file{
+
+  width:100%;
+
+  font-size:11px;
+
+  color:white;
+}
+
+
+/* =========================
+   WINNERS
+========================= */
+
+.winners{
+
+  position:relative;
+
+  z-index:2;
+
+  display:grid;
+
+  gap:13px;
+
+  margin-top:20px;
+}
+
+.winner{
+
+  background:
+    rgba(255,255,255,.10);
+
+  border:
+    1px solid
+    rgba(255,255,255,.16);
+
+  border-radius:15px;
+
+  padding:17px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:12px;
+}
+
+.rank{
+
+  font-family:
+    'Playfair Display',
+    serif;
+
+  color:#e4cc82;
+
+  font-size:23px;
+}
+
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.back-main{
+
+  border:
+    1px solid
+    #d2dce8;
+
+  background:white;
+
+  color:#17446f;
+
+  padding:
+    10px
+    18px;
+
+  border-radius:50px;
+
+  margin-bottom:10px;
+
+  transition:.3s;
+}
+
+.back-main:hover{
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 8px 18px
+    rgba(0,0,0,.08);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer{
+
+  background:#fff;
+
+  text-align:center;
+
+  padding:
+    45px
+    20px
+    20px;
+
+  margin-top:40px;
+
+  border-top:
+    1px solid
+    #e8e8e8;
+}
+
+.footer-name{
+
+  font-family:
+    'Playfair Display',
+    serif;
+
+  font-size:20px;
+
+  color:#173f33;
+}
+
+.footer-phone{
+
+  margin-top:7px;
+
+  color:#50635b;
+}
+
+.footer-place{
+
+  margin-top:6px;
+
+  font-size:12px;
+
+  color:#7a8580;
+}
+
+.ruvaissss{
+
+  margin-top:25px;
+
+  text-align:right;
+
+  font-family:Arial,sans-serif;
+
+  font-size:7px;
+
+  letter-spacing:1px;
+
+  color:#b8b8b8;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:650px){
+
+  .brand-box{
+
+    min-height:350px;
+
+    padding:
+      35px
+      15px;
+  }
+
+  .brand-logos{
+
+    gap:12px;
+  }
+
+  .logo-card{
+
+    width:45%;
+  }
+
+  .logo-card img{
+
+    max-height:180px;
+  }
+
+  .brand-description{
+
+    margin-top:22px;
+  }
+
+  .home-result{
+
+    justify-content:flex-start;
+  }
+
+  .result-home-button{
+
+    padding:
+      16px
+      28px;
+  }
+
+  .youtube-row{
+
+    flex-direction:column;
+  }
+
+  .photo-grid{
+
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  .competition{
+
+    padding:17px;
+  }
+
+  .competition-name{
+
+    font-size:15px;
+  }
+
+  .zone-badge{
+
+    font-size:8px;
+
+    padding:
+      6px
+      9px;
+  }
+
+  .comp-result-title{
+
+    padding:
+      35px
+      65px
+      20px;
+  }
+
+  .download-button{
+
+    top:18px;
+
+    right:18px;
+  }
+
+}</style>
+</head>
+
+<body>
+
+<!-- =====================================================
+     OPENING PAGE
+===================================================== -->
+
+<section id="opening">
+
+  <div class="opening-bg"></div>
+
+  <div class="opening-overlay"></div>
+
+  <div class="opening-content">
+
+    <img
+      src="main-logo.png"
+      class="opening-logo"
+      alt="Nabidina Main Logo"
+    >
+
+    <div class="swipe">
+
+      <div class="swipe-line"></div>
+
+      SWIPE UP
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     HOME PAGE
+===================================================== -->
+
+<section id="home" class="page">
+
+  <div class="home-wrapper">
+
+    <div class="brand-box">
+
+      <div class="brand-logos">
+
+        <!-- MAIN LOGO -->
+
+        <div class="logo-card">
+
+          <img
+            src="main-logo.png"
+            alt="Main Logo"
+          >
+
+        </div>
+
+
+        <!-- DARS LOGO -->
+
+        <div class="logo-card">
+
+          <img
+            src="dars-logo.png"
+            alt="Dars Logo"
+          >
+
+        </div>
+
+      </div>
+
+
+      <div class="brand-description">
+
+        dedicating
+
+        <span>
+          BADRUL HUDHA DA'AWA DARS
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <!-- RESULT BUTTON -->
+
+    <div class="home-result">
+
+      <button
+        class="result-home-button"
+        onclick="openMainPage()"
+      >
+
+        Result
+
+        <small>
+          RESULTS &amp; GALLERY
+        </small>
+
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- FOOTER -->
+
+  <footer class="site-footer">
+
+    <div class="footer-name">
+      BADRUL HUDHA DA'AWA DARS
+    </div>
+
+    <div class="footer-phone">
+      +91 9496931381
+    </div>
+
+    <div class="footer-place">
+      Ziyarathingara &nbsp; Kanhanghad &nbsp; Kasaragod (dist)
+    </div>
+
+    <div class="ruvaissss">
+      Ruvaissss
+    </div>
+
+  </footer>
+
+</section>
+
+
+<!-- =====================================================
+     RESULT / GALLERY PAGE
+===================================================== -->
+
+<section id="mainPage" class="page">
+
+  <div class="main-wrapper">
+
+
+    <!-- BACK -->
+
+    <button
+      class="back-button"
+      onclick="openHome()"
+    >
+
+      ← Home
+
+    </button>
+
+
+    <!-- HEADING -->
+
+    <div class="main-heading">
+
+      <h1>
+        Result
+      </h1>
+
+      <p>
+        BADRUL HUDHA DA'AWA DARS
+      </p>
+
+    </div>
+
+
+    <!-- RESULT / GALLERY SLIDE -->
+
+    <div class="tabs">
+
+      <button
+        id="resultTab"
+        class="tab active"
+        onclick="showResultTab()"
+      >
+
+        Result
+
+      </button>
+
+      <button
+        id="galleryTab"
+        class="tab"
+        onclick="showGalleryTab()"
+      >
+
+        Gallery
+
+      </button>
+
+    </div>
+
+
+    <!-- =================================================
+         RESULT SECTION
+    ================================================= -->
+
+    <div
+      id="resultArea"
+      class="result-area"
+    >
+
+      <div class="category-box">
+
+        <label>
+          Select Category
+        </label>
+
+        <select
+          id="categorySelect"
+          class="category-select"
+          onchange="filterCompetitions()"
+        >
+
+          <option value="all">
+            All Categories
+          </option>
+
+          <option value="High Zone">
+            High Zone
+          </option>
+
+          <option value="Mid Zone">
+            Mid Zone
+          </option>
+
+          <option value="Low Zone">
+            Low Zone
+          </option>
+
+          <option value="General">
+            General
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <div
+        id="competitionList"
+        class="competition-list"
+      ></div>
+
+    </div>
+
+
+    <!-- =================================================
+         GALLERY SECTION
+    ================================================= -->
+
+    <div
+      id="galleryArea"
+      class="gallery-area"
+    >
+
+
+      <!-- YOUTUBE LIVE -->
+
+      <div class="gallery-live">
+
+        <div class="live-title">
+
+          <span class="live-dot"></span>
+
+          Live
+
+        </div>
+
+
+        <div class="youtube-row">
+
+          <input
+            id="youtubeLink"
+            class="youtube-input"
+            type="text"
+            placeholder="YouTube video link paste ചെയ്യുക"
+          >
+
+          <button
+            class="youtube-button"
+            onclick="openYouTube()"
+          >
+
+            Open
+
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- PHOTO UPLOAD -->
+
+      <div class="gallery-upload">
+
+        <div class="upload-title">
+
+          Program Photos
+
+        </div>
+
+        <div class="upload-note">
+
+          ഇവിടെ program photos select ചെയ്യാം.
+
+        </div>
+
+        <input
+          id="galleryFiles"
+          class="photo-input"
+          type="file"
+          accept="image/*"
+          multiple
+          onchange="previewGallery(event)"
+        >
+
+
+        <div
+          id="photoGrid"
+          class="photo-grid"
+        ></div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- FOOTER -->
+
+  <footer class="site-footer">
+
+    <div class="footer-name">
+      BADRUL HUDHA DA'AWA DARS
+    </div>
+
+    <div class="footer-phone">
+      +91 9496931381
+    </div>
+
+    <div class="footer-place">
+      Ziyarathingara &nbsp; Kanhanghad &nbsp; Kasaragod (dist)
+    </div>
+
+    <div class="ruvaissss">
+      Ruvaissss
+    </div>
+
+  </footer>
+
+</section>
+
+
+<!-- =====================================================
+     INDIVIDUAL COMPETITION RESULT PAGE
+===================================================== -->
+
+<section
+  id="competitionPage"
+  class="page"
+>
+
+  <div class="competition-result-wrapper">
+
+
+    <!-- BACK -->
+
+    <button
+      class="back-main"
+      onclick="openMainPage()"
+    >
+
+      ← Back to Results
+
+    </button>
+
+
+    <div class="blue-card">
+
+
+      <!-- DOWNLOAD -->
+
+      <button
+        id="downloadButton"
+        class="download-button"
+        onclick="downloadResultPhoto()"
+      >
+
+        ↓ Download
+
+      </button>
+
+
+      <!-- COMPETITION TITLE -->
+
+      <div
+        id="competitionTitle"
+        class="comp-result-title"
+      >
+
+        Competition
+
+      </div>
+
+
+      <!-- WINNER POSITIONS -->
+
+      <div
+        id="winnerList"
+        class="winners"
+      >
+
+        <div class="winner">
+
+          <span class="rank">
+            1st
+          </span>
+
+          <span>
+            Result
+          </span>
+
+        </div>
+
+
+        <div class="winner">
+
+          <span class="rank">
+            2nd
+          </span>
+
+          <span>
+            Result
+          </span>
+
+        </div>
+
+
+        <div class="winner">
+
+          <span class="rank">
+            3rd
+          </span>
+
+          <span>
+            Result
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- =================================================
+           RESULT PHOTO PREVIEW — NEW PAGE
+      ================================================= -->
+
+      <div class="result-photo-area">
+
+        <div class="preview-label">
+
+          Result Preview
+
+        </div>
+
+
+        <img
+          id="resultPhoto"
+          class="result-photo"
+          alt="Result Photo"
+        >
+
+
+        <div
+          id="notUploaded"
+          class="not-uploaded"
+        >
+
+          Not uploaded, please wait...
+
+        </div>
+
+      </div>
+
+
+      <!-- =================================================
+           RESULT PHOTO UPLOAD
+      ================================================= -->
+
+      <div class="result-upload-box">
+
+        <p>
+          Result photo upload / replace
+        </p>
+
+        <input
+          id="resultFile"
+          class="result-file"
+          type="file"
+          accept="image/*"
+          onchange="previewResult(event)"
+        >
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+  <!-- FOOTER -->
+
+  <footer class="site-footer">
+
+    <div class="footer-name">
+      BADRUL HUDHA DA'AWA DARS
+    </div>
+
+    <div class="footer-phone">
+      +91 9496931381
+    </div>
+
+    <div class="footer-place">
+      Ziyarathingara &nbsp; Kanhanghad &nbsp; Kasaragod (dist)
+    </div>
+
+    <div class="ruvaissss">
+      Ruvaissss
+    </div>
+
+  </footer>
+
+</section><script>
+
+/* =====================================================
+   COMPETITIONS
+===================================================== */
+
+const competitions = [
+
+  {
+    key:"qiraath-high",
+    name:"Qira'ath",
+    type:"Stage",
+    zone:"High Zone"
+  },
+
+  {
+    key:"speech-high",
+    name:"Speech",
+    type:"Stage",
+    zone:"High Zone"
+  },
+
+  {
+    key:"speech-low",
+    name:"Speech",
+    type:"Stage",
+    zone:"Low Zone"
+  },
+
+  {
+    key:"madh-song-low",
+    name:"Madh Song",
+    type:"Stage",
+    zone:"Low Zone"
+  },
+
+  {
+    key:"mothertunk-general",
+    name:"Mothertunk",
+    type:"Stage",
+    zone:"General"
+  },
+
+  {
+    key:"essay-general",
+    name:"Essay",
+    type:"Off Stage",
+    zone:"General"
+  },
+
+  {
+    key:"language-game-low",
+    name:"Language Game",
+    type:"Off Stage",
+    zone:"Low Zone"
+  },
+
+  {
+    key:"qiraath-mid",
+    name:"Qira'ath",
+    type:"Off Stage",
+    zone:"Mid Zone"
+  },
+
+  {
+    key:"qiraath-low",
+    name:"Qira'ath",
+    type:"Off Stage",
+    zone:"Low Zone"
+  },
+
+  {
+    key:"exam-high",
+    name:"Exam Results",
+    type:"Off Stage",
+    zone:"High Zone"
+  },
+
+  {
+    key:"exam-mid",
+    name:"Exam Results",
+    type:"Off Stage",
+    zone:"Mid Zone"
+  },
+
+  {
+    key:"exam-low",
+    name:"Exam Results",
+    type:"Off Stage",
+    zone:"Low Zone"
+  }
+
+];
+
+
+/* =====================================================
+   RESULT DATA
+===================================================== */
+
+/*
+  ഇവിടെ ഓരോ competition-ന്റെയും result
+  പിന്നീട് update ചെയ്യാം.
+
+  ഇപ്പോൾ upload ചെയ്തിട്ടില്ലെങ്കിൽ:
+
+  Not uploaded, please wait...
+
+  എന്ന് കാണിക്കും.
+*/
+
+const resultData = {
+
+  "qiraath-high":{
+    first:"",
+    second:"",
+    third:"",
+    photo:""
+  },
+
+  "speech-high":{
+    first:"",
+    second:"",
+    third:"",
+    photo:""
+  },
+
+  "speech-low":{
+    first:"",
+    second:"",
+    third:"",
+    photo:""
+  },
+
+  "madh-song-low":{
+    first:"",
+    second:"",
+    third:"",
+    photo:""
+  },
+
+  "mothertunk-general":{
+    first:"",
+    second:"",
+    third:"",
+    photo:""
+  },
+
+  "essay-general":{
+    first:"",
+    second:"",
+    third:"",
+    photo:""
+  },
+
+  "language-game-low":{
+    first:"",
+    second:"",
+    third:"",
+    photo:""
+  },
+
+  "qiraath-mid":{
+    first:"",
+    second:"",
+    third:"",
+    photo:""
+  },
+
+  "qiraath-low":{
+    first:"",
+    second:"",
+    third:"",
+    photo:""
+  },
+
+  "exam-high":{
+    first:"",
+    second:"",
+    third:"",
+    photo:""
+  },
+
+  "exam-mid":{
+    first:"",
+    second:"",
+    third:"",
+    photo:""
+  },
+
+  "exam-low":{
+    first:"",
+    second:"",
+    third:"",
+    photo:""
+  }
+
+};
+
+
+/* =====================================================
+   CURRENT COMPETITION
+===================================================== */
+
+let currentCompetition = null;
+
+let currentResultURL = null;
+
+
+/* =====================================================
+   OPENING → HOME
+===================================================== */
+
+function openHome(){
+
+  document
+    .getElementById("opening")
+    .style.transform =
+    "translateY(-100%)";
+
+  document
+    .getElementById("home")
+    .classList.add("active");
+
+  document
+    .getElementById("mainPage")
+    .classList.remove("active");
+
+  document
+    .getElementById("competitionPage")
+    .classList.remove("active");
+
+  window.scrollTo(0,0);
+}
+
+
+/* =====================================================
+   OPEN HOME
+===================================================== */
+
+function showHome(){
+
+  document
+    .getElementById("opening")
+    .style.transform =
+    "translateY(-100%)";
+
+  document
+    .getElementById("home")
+    .classList.add("active");
+
+  document
+    .getElementById("mainPage")
+    .classList.remove("active");
+
+  document
+    .getElementById("competitionPage")
+    .classList.remove("active");
+
+  window.scrollTo(0,0);
+}
+
+
+/* =====================================================
+   OPEN MAIN RESULT PAGE
+===================================================== */
+
+function openMainPage(){
+
+  document
+    .getElementById("opening")
+    .style.transform =
+    "translateY(-100%)";
+
+  document
+    .getElementById("home")
+    .classList.remove("active");
+
+  document
+    .getElementById("competitionPage")
+    .classList.remove("active");
+
+  document
+    .getElementById("mainPage")
+    .classList.add("active");
+
+  showResultTab();
+
+  window.scrollTo(0,0);
+}
+
+
+/* =====================================================
+   OPEN INDIVIDUAL COMPETITION PAGE
+===================================================== */
+
+function openCompetition(key){
+
+  currentCompetition =
+    competitions.find(
+      item => item.key === key
+    );
+
+  if(!currentCompetition){
+    return;
+  }
+
+
+  currentResultURL = null;
+
+
+  document
+    .getElementById("mainPage")
+    .classList.remove("active");
+
+  document
+    .getElementById("home")
+    .classList.remove("active");
+
+  document
+    .getElementById("competitionPage")
+    .classList.add("active");
+
+
+  document
+    .getElementById("competitionTitle")
+    .textContent =
+    currentCompetition.name;
+
+
+  const data =
+    resultData[currentCompetition.key];
+
+
+  /* =========================
+     WINNERS
+  ========================= */
+
+  document
+    .getElementById("winnerList")
+    .innerHTML = `
+
+      <div class="winner">
+
+        <span class="rank">
+          1st
+        </span>
+
+        <span>
+          ${
+            data.first ||
+            "Not uploaded"
+          }
+        </span>
+
+      </div>
+
+
+      <div class="winner">
+
+        <span class="rank">
+          2nd
+        </span>
+
+        <span>
+          ${
+            data.second ||
+            "Not uploaded"
+          }
+        </span>
+
+      </div>
+
+
+      <div class="winner">
+
+        <span class="rank">
+          3rd
+        </span>
+
+        <span>
+          ${
+            data.third ||
+            "Not uploaded"
+          }
+        </span>
+
+      </div>
+
+    `;
+
+
+  /* =========================
+     RESULT PHOTO
+  ========================= */
+
+  const photo =
+    document.getElementById(
+      "resultPhoto"
+    );
+
+  const notUploaded =
+    document.getElementById(
+      "notUploaded"
+    );
+
+
+  if(data.photo){
+
+    photo.src =
+      data.photo;
+
+    photo.style.display =
+      "block";
+
+    notUploaded.style.display =
+      "none";
+
+    currentResultURL =
+      data.photo;
+
+  }else{
+
+    photo.src = "";
+
+    photo.style.display =
+      "none";
+
+    notUploaded.style.display =
+      "flex";
+
+  }
+
+
+  /*
+    Upload input reset ചെയ്യുന്നു.
+    അതുകൊണ്ട് പുതിയ competition-ൽ
+    പഴയ selected file കാണിക്കില്ല.
+  */
+
+  document
+    .getElementById("resultFile")
+    .value = "";
+
+
+  window.scrollTo(0,0);
+
+}
+
+
+/* =====================================================
+   FILTER COMPETITIONS
+===================================================== */
+
+function filterCompetitions(){
+
+  const selected =
+    document
+      .getElementById("categorySelect")
+      .value;
+
+
+  const list =
+    document
+      .getElementById("competitionList");
+
+
+  let filtered;
+
+
+  if(selected === "all"){
+
+    filtered =
+      competitions;
+
+  }else{
+
+    filtered =
+      competitions.filter(
+        item =>
+          item.zone === selected
+      );
+
+  }
+
+
+  list.innerHTML = "";
+
+
+  filtered.forEach(item => {
+
+    const card =
+      document.createElement("div");
+
+
+    card.className =
+      "competition";
+
+
+    card.onclick = function(){
+
+      openCompetition(
+        item.key
+      );
+
+    };
+
+
+    card.innerHTML = `
+
+      <div class="competition-info">
+
+        <span class="stage-label">
+          ${item.type}
+        </span>
+
+        <div class="competition-name">
+          ${item.name}
+        </div>
+
+      </div>
+
+
+      <div class="zone-badge">
+        ${item.zone}
+      </div>
+
+    `;
+
+
+    list.appendChild(card);
+
+  });
+
+}
+
+
+/* =====================================================
+   RESULT TAB
+===================================================== */
+
+function showResultTab(){
+
+  document
+    .getElementById("resultArea")
+    .style.display =
+    "block";
+
+  document
+    .getElementById("galleryArea")
+    .style.display =
+    "none";
+
+
+  document
+    .getElementById("resultTab")
+    .classList.add("active");
+
+  document
+    .getElementById("galleryTab")
+    .classList.remove("active");
+
+}
+
+
+/* =====================================================
+   GALLERY TAB
+===================================================== */
+
+function showGalleryTab(){
+
+  document
+    .getElementById("resultArea")
+    .style.display =
+    "none";
+
+  document
+    .getElementById("galleryArea")
+    .style.display =
+    "block";
+
+
+  document
+    .getElementById("resultTab")
+    .classList.remove("active");
+
+  document
+    .getElementById("galleryTab")
+    .classList.add("active");
+
+}
+
+
+/* =====================================================
+   RESULT PHOTO PREVIEW
+===================================================== */
+
+function previewResult(event){
+
+  const file =
+    event.target.files[0];
+
+  if(!file){
+    return;
+  }
+
+
+  const reader =
+    new FileReader();
+
+
+  reader.onload =
+    function(e){
+
+      const photo =
+        document.getElementById(
+          "resultPhoto"
+        );
+
+      const notUploaded =
+        document.getElementById(
+          "notUploaded"
+        );
+
+
+      photo.src =
+        e.target.result;
+
+      photo.style.display =
+        "block";
+
+      notUploaded.style.display =
+        "none";
+
+
+      currentResultURL =
+        e.target.result;
+
+
+      /*
+        IMPORTANT:
+
+        ഇത് ഇപ്പോഴത്തെ browser session-ൽ
+        preview കാണിക്കും.
+
+        Permanent website update വേണമെങ്കിൽ
+        ഈ photo file GitHub-ലേക്ക് upload
+        ചെയ്ത് resultData-യിലെ photo path
+        മാറ്റണം.
+      */
+
+      if(currentCompetition){
+
+        resultData[
+          currentCompetition.key
+        ].photo =
+          e.target.result;
+
+      }
+
+    };
+
+
+  reader.readAsDataURL(file);
+
+}
+
+
+/* =====================================================
+   DOWNLOAD RESULT PHOTO
+===================================================== */
+
+function downloadResultPhoto(){
+
+  if(!currentResultURL){
+
+    alert(
+      "Result photo ഇതുവരെ upload ചെയ്തിട്ടില്ല."
+    );
+
+    return;
+  }
+
+
+  const link =
+    document.createElement("a");
+
+
+  link.href =
+    currentResultURL;
+
+  link.download =
+    (
+      currentCompetition
+        ? currentCompetition.name
+        : "result"
+    )
+    .replace(/\s+/g,"-")
+    + "-result.jpg";
+
+
+  document.body.appendChild(link);
+
+  link.click();
+
+  link.remove();
+
+}
+
+
+/* =====================================================
+   YOUTUBE
+===================================================== */
+
+function openYouTube(){
+
+  const input =
+    document
+      .getElementById("youtubeLink")
+      .value
+      .trim();
+
+
+  if(!input){
+
+    alert(
+      "YouTube link ആദ്യം paste ചെയ്യുക."
+    );
+
+    return;
+  }
+
+
+  window.open(
+    input,
+    "_blank"
+  );
+
+}
+
+
+/* =====================================================
+   GALLERY PHOTO PREVIEW
+===================================================== */
+
+function previewGallery(event){
+
+  const files =
+    Array.from(
+      event.target.files
+    );
+
+
+  const grid =
+    document.getElementById(
+      "photoGrid"
+    );
+
+
+  grid.innerHTML = "";
+
+
+  files.forEach(file => {
+
+    const reader =
+      new FileReader();
+
+
+    reader.onload =
+      function(e){
+
+        const img =
+          document.createElement("img");
+
+        img.src =
+          e.target.result;
+
+        img.alt =
+          "Program Photo";
+
+        grid.appendChild(img);
+
+      };
+
+
+    reader.readAsDataURL(file);
+
+  });
+
+}
+
+
+/* =====================================================
+   SWIPE OPENING
+===================================================== */
+
+let touchStartY = 0;
+
+let touchEndY = 0;
+
+
+document.addEventListener(
+  "touchstart",
+  function(event){
+
+    touchStartY =
+      event.changedTouches[0].screenY;
+
+  },
+  {passive:true}
+);
+
+
+document.addEventListener(
+  "touchend",
+  function(event){
+
+    touchEndY =
+      event.changedTouches[0].screenY;
+
+
+    const difference =
+      touchStartY -
+      touchEndY;
+
+
+    /*
+      Opening page-ൽ മാത്രം
+      swipe up ചെയ്താൽ Home.
+    */
+
+    const opening =
+      document.getElementById(
+        "opening"
+      );
+
+
+    if(
+      opening &&
+      opening.style.transform !==
+      "translateY(-100%)" &&
+      difference > 60
+    ){
+
+      openHome();
+
+    }
+
+  },
+  {passive:true}
+);
+
+
+/* =====================================================
+   OPENING CLICK / TOUCH
+===================================================== */
+
+document
+  .getElementById("opening")
+  .addEventListener(
+    "click",
+    function(){
+
+      openHome();
+
+    }
+  );
+
+
+/* =====================================================
+   INITIAL LOAD
+===================================================== */
+
+document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    /*
+      Opening മാത്രം ആദ്യം കാണിക്കും.
+    */
+
+    document
+      .getElementById("home")
+      .classList.remove("active");
+
+    document
+      .getElementById("mainPage")
+      .classList.remove("active");
+
+    document
+      .getElementById("competitionPage")
+      .classList.remove("active");
+
+
+    filterCompetitions();
+
+  }
+);
+
+</script>
+
+</body>
+</html>
