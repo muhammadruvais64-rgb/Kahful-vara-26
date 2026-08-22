@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ml">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>കഹ്ഫുൽ വറാ 2026</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+    font-family:'Noto Sans Malayalam',sans-serif;
+    background:#fff;
+    color:#183d32;
+    overflow-x:hidden;
+}
+
+/* =====================================================
+   OPENING PAGE — KEEPING THIS AS THE ORIGINAL CONCEPT
+===================================================== */
+
+#opening{
+    position:fixed;
+    inset:0;
+    z-index:9999;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    background:#071c16;
+    transition:transform 1s cubic-bezier(.77,0,.18,1);
+}
+
+.opening-bg{
+    position:absolute;
+    inset:-40px;
+    background:url("main-logo.png") center/cover no-repeat;
+    filter:blur(35px);
+    opacity:.18;
+    transform:scale(1.15);
+}
+
+.opening-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.52);
+}
+
+.opening-content{
+    position:relative;
+    z-index:2;
+    text-align:center;
+}
+
+.opening-logo{
+    width:min(78vw,430px);
+    max-height:65vh;
+    object-fit:contain;
+}
+
+.swipe{
+    margin-top:30px;
+    color:rgba(255,255,255,.8);
+    font-family:Arial,sans-serif;
+    font-size:10px;
+    letter-spacing:4px;
+}
+
+.swipe-line{
+    width:1px;
+    height:45px;
+    background:linear-gradient(
+        transparent,
+        white,
+        transparent
+    );
+    margin:0 auto 12px;
+    animation:swipe 1.6s infinite;
+}
+
+@keyframes swipe{
+    0%{transform:translateY(-8px);opacity:0}
+    50%{opacity:1}
+    100%{transform:translateY(8px);opacity:0}
+}
+
+/* =====================================================
+   COMMON
+===================================================== */
+
+.page{
+    display:none;
+    min-height:100vh;
+}
+
+.page.active{
+    display:block;
+    animation:pageIn .65s ease;
+}
+
+@keyframes pageIn{
+    from{opacity:0;transform:translateY(20px)}
+    to{opacity:1;transform:translateY(0)}
+}
+
+.gold-line{
+    height:1px;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        #c8a85b,
+        transparent
+    );
+}
+
+/* =====================================================
+   HOME
+===================================================== */
+
+#home{
+    background:#fff;
+    min-height:100vh;
+    padding:28px 18px 0;
+    position:relative;
+    overflow:hidden;
+}
+
+.home-wrapper{
+    width:min(1050px,94%);
+    margin:auto;
+}
+
+/* green logo box */
+
+.brand-box{
+    position:relative;
+    min-height:400px;
+    border-radius:0 0 42px 42px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #164b3d,
+            #0e352b
+        );
+
+    box-shadow:
+        0 25px 50px rgba(17,65,52,.22),
+        inset 0 1px 0 rgba(255,255,255,.14);
+
+    padding:45px 30px 38px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    transform:perspective(1000px) rotateX(0deg);
+}
+
+.brand-box::before{
+    content:"";
+    position:absolute;
+    inset:12px;
+    border:1px solid rgba(210,175,92,.7);
+    border-radius:0 0 32px 32px;
+    pointer-events:none;
+}
+
+.brand-logos{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:clamp(25px,7vw,80px);
+    position:relative;
+    z-index:2;
+}
+
+.logo-card{
+    width:42%;
+    max-width:320px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.logo-card img{
+    width:100%;
+    max-height:230px;
+    object-fit:contain;
+}
+
+/* Do NOT change the main logo colour */
+
+.brand-description{
+    position:relative;
+    z-index:2;
+    margin-top:32px;
+    text-align:center;
+    color:#fff;
+    font-family:'Playfair Display',serif;
+    font-size:clamp(14px,3vw,21px);
+    letter-spacing:1.5px;
+}
+
+.brand-description span{
+    color:#d9c17a;
+}
+
+/* Result box */
+
+.home-result{
+    margin-top:35px;
+    width:100%;
+    display:flex;
+    justify-content:flex-start;
+}
+
+.result-home-button{
+    border:none;
+    cursor:pointer;
+    color:white;
+
+    background:
+        linear-gradient(
+            145deg,
+            #174f40,
+            #0d362c
+        );
+
+    padding:19px 38px;
+    border-radius:18px;
+
+    box-shadow:
+        0 15px 30px rgba(16,64,51,.2),
+        inset 0 1px 0 rgba(255,255,255,.12);
+
+    font-family:'Playfair Display',serif;
+    font-size:21px;
+
+    border:1px solid rgba(200,168,91,.65);
+    transition:.3s;
+}
+
+.result-home-button:hover{
+    transform:translateY(-4px);
+    box-shadow:0 22px 35px rgba(16,64,51,.27);
+}
+
+.result-home-button small{
+    display:block;
+    margin-top:3px;
+    font-family:Arial,sans-serif;
+    font-size:9px;
+    letter-spacing:2px;
+    color:#d9c17a;
+}
+
+/* =====================================================
+   RESULT / GALLERY PAGE
+===================================================== */
+
+#mainPage{
+    background:
+        linear-gradient(
+            180deg,
+            #f7fbf9,
+            #fff 35%,
+            #f5f8f6
+        );
+    padding:22px 16px 0;
+}
+
+.main-wrapper{
+    width:min(1050px,94%);
+    margin:auto;
+}
+
+.back-button{
+    border:1px solid #d4ddd8;
+    background:white;
+    color:#285446;
+    padding:10px 18px;
+    border-radius:50px;
+    cursor:pointer;
+    box-shadow:0 6px 16px rgba(0,0,0,.06);
+}
+
+.main-heading{
+    text-align:center;
+    padding:35px 0 25px;
+}
+
+.main-heading h1{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(32px,7vw,55px);
+    color:#173f33;
+}
+
+.main-heading p{
+    margin-top:7px;
+    color:#76827c;
+    font-size:12px;
+    letter-spacing:2px;
+}
+
+/* tabs */
+
+.tabs{
+    width:min(620px,100%);
+    margin:0 auto 30px;
+    padding:5px;
+    display:flex;
+    background:#e5eee9;
+    border-radius:20px;
+    box-shadow:inset 0 2px 5px rgba(0,0,0,.07);
+}
+
+.tab{
+    flex:1;
+    border:none;
+    padding:15px;
+    border-radius:15px;
+    background:transparent;
+    color:#6d7974;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.tab.active{
+    background:#164b3d;
+    color:white;
+    box-shadow:0 8px 18px rgba(22,75,61,.2);
+}
+
+/* =====================================================
+   RESULT LIST
+===================================================== */
+
+.result-area{
+    padding-bottom:70px;
+}
+
+.category-box{
+    background:white;
+    padding:18px;
+    border-radius:20px;
+    box-shadow:
+        0 12px 30px rgba(25,70,55,.07);
+    border:1px solid #e0e8e3;
+    margin-bottom:25px;
+}
+
+.category-box label{
+    display:block;
+    font-size:12px;
+    color:#6f7b76;
+    margin-bottom:8px;
+}
+
+.category-select{
+    width:100%;
+    border:1px solid #d7e0db;
+    background:#fafcfb;
+    border-radius:13px;
+    padding:14px;
+    color:#244c40;
+    font-family:inherit;
+    font-size:14px;
+}
+
+/* competitions */
+
+.competition-list{
+    display:grid;
+    gap:13px;
+}
+
+.competition{
+    position:relative;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+    background:white;
+    padding:20px;
+    border-radius:18px;
+    border:1px solid #e1e8e4;
+    box-shadow:0 9px 25px rgba(20,65,52,.065);
+    cursor:pointer;
+    transition:.3s;
+}
+
+.competition:hover{
+    transform:translateY(-3px);
+    box-shadow:0 16px 30px rgba(20,65,52,.12);
+}
+
+.competition-info{
+    min-width:0;
+}
+
+.stage-label{
+    display:block;
+    color:#8b9691;
+    font-family:Arial,sans-serif;
+    font-size:9px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    margin-bottom:5px;
+}
+
+.competition-name{
+    font-size:17px;
+    color:#24483d;
+}
+
+.zone-badge{
+    flex-shrink:0;
+    background:#edf5f1;
+    color:#28604e;
+    padding:7px 12px;
+    border-radius:50px;
+    font-family:Arial,sans-serif;
+    font-size:9px;
+    letter-spacing:1px;
+}
+
+/* =====================================================
+   COMPETITION RESULT PAGE
+===================================================== */
+
+#competitionPage{
+    background:
+        linear-gradient(
+            145deg,
+            #f4f8ff,
+            #fff
+        );
+}
+
+.competition-result-wrapper{
+    width:min(950px,92%);
+    margin:auto;
+    padding:25px 0 80px;
+}
+
+.blue-card{
+    position:relative;
+    margin-top:25px;
+    padding:35px 20px;
+    background:
+        linear-gradient(
+            145deg,
+            #0b376d,
+            #071f43
+        );
+    color:white;
+    border-radius:28px;
+    box-shadow:
+        0 25px 55px rgba(8,47,91,.25);
+    overflow:hidden;
+}
+
+.blue-card::after{
+    content:"";
+    position:absolute;
+    inset:12px;
+    border:1px solid rgba(210,175,92,.75);
+    border-radius:20px;
+    pointer-events:none;
+}
+
+.download-button{
+    position:absolute;
+    z-index:3;
+    top:22px;
+    right:22px;
+    border:1px solid rgba(255,255,255,.35);
+    background:rgba(255,255,255,.12);
+    color:white;
+    padding:9px 14px;
+    border-radius:50px;
+    cursor:pointer;
+    font-size:11px;
+}
+
+.comp-result-title{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    font-family:'Playfair Display',serif;
+    font-size:clamp(28px,7vw,45px);
+    padding:35px 70px 20px;
+}
+
+.not-uploaded{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    padding:35px 10px;
+    color:#dce8f7;
+    font-size:14px;
+}
+
+/* winner cards */
+
+.winners{
+    position:relative;
+    z-index:2;
+    display:grid;
+    gap:13px;
+    margin-top:15px;
+}
+
+.winner{
+    background:rgba(255,255,255,.1);
+    border:1px solid rgba(255,255,255,.16);
+    border-radius:15px;
+    padding:17px;
+    display:flex;
+    align-items:center;
+   
