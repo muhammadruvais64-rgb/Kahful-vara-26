@@ -552,7 +552,7 @@ button{
 
 }
 
-  </style><style>
+    </style><style>
 
 /* ==================================================
    RESULT / GALLERY PAGE
@@ -1253,7 +1253,7 @@ button{
 
 }
 
-  </style><style>
+            </style><style>
 
 /* ==================================================
    COMPETITION RESULT PAGE
@@ -1706,7 +1706,7 @@ button{
 
 }
 
-  </style><style>
+            </style><style>
 
 /* ==================================================
    FOOTER
@@ -2176,22 +2176,17 @@ button{
 </section><script>
 
 /* ==================================================
-   IMPORTANT SETTINGS
+   YOUTUBE LIVE LINK
 ================================================== */
 
-
 /*
-   YOUTUBE LINK
-
-   ഇവിടെ YouTube video/live link മാത്രം മാറ്റുക.
+   ഇവിടെ മാത്രം YouTube link ഇടുക.
 
    Example:
-
    const youtubeURL =
-   "https://www.youtube.com/watch?v=XXXXXXXXXXX";
+   "https://www.youtube.com/watch?v=XXXXXXXX";
 
    Link ഇല്ലെങ്കിൽ:
-
    const youtubeURL = "";
 */
 
@@ -2200,128 +2195,358 @@ const youtubeURL = "";
 
 /* ==================================================
    COMPETITION DATA
+==================================================
 
-   ഇവിടെ competition names മാറ്റാം.
+   photo:
+   Result photo-യുടെ filename.
 
-   zone:
-   high
-   mid
-   low
-   general
+   Example:
+   photo:"qiraath-result.jpg"
 
-   stage:
-   Stage
-   Off Stage
+   photo ഇല്ലെങ്കിൽ:
+   photo:""
+
+   winners:
+   1st / 2nd / 3rd പേരുകൾ ഇവിടെ കൊടുക്കുക.
+
 ================================================== */
+
 
 const competitions = [
 
     {
         id:"qiraath-high",
+
         name:"Qira'ath",
+
         zone:"high",
+
         stage:"Stage",
+
         photo:"",
-        winners:[]
+
+        winners:[
+            {
+                position:"1st",
+                name:""
+            },
+            {
+                position:"2nd",
+                name:""
+            },
+            {
+                position:"3rd",
+                name:""
+            }
+        ]
     },
+
 
     {
         id:"speech-high",
+
         name:"Speech",
+
         zone:"high",
+
         stage:"Stage",
+
         photo:"",
-        winners:[]
+
+        winners:[
+            {
+                position:"1st",
+                name:""
+            },
+            {
+                position:"2nd",
+                name:""
+            },
+            {
+                position:"3rd",
+                name:""
+            }
+        ]
     },
+
 
     {
         id:"speech-low",
+
         name:"Speech",
+
         zone:"low",
+
         stage:"Stage",
+
         photo:"",
-        winners:[]
+
+        winners:[
+            {
+                position:"1st",
+                name:""
+            },
+            {
+                position:"2nd",
+                name:""
+            },
+            {
+                position:"3rd",
+                name:""
+            }
+        ]
     },
+
 
     {
         id:"madh-song",
+
         name:"Madh Song",
+
         zone:"low",
+
         stage:"Stage",
+
         photo:"",
-        winners:[]
+
+        winners:[
+            {
+                position:"1st",
+                name:""
+            },
+            {
+                position:"2nd",
+                name:""
+            },
+            {
+                position:"3rd",
+                name:""
+            }
+        ]
     },
+
 
     {
         id:"mothertunk",
+
         name:"Mothertunk",
+
         zone:"general",
+
         stage:"Stage",
+
         photo:"",
-        winners:[]
+
+        winners:[
+            {
+                position:"1st",
+                name:""
+            },
+            {
+                position:"2nd",
+                name:""
+            },
+            {
+                position:"3rd",
+                name:""
+            }
+        ]
     },
+
 
     {
         id:"essay",
+
         name:"Essay",
+
         zone:"general",
+
         stage:"Off Stage",
+
         photo:"",
-        winners:[]
+
+        winners:[
+            {
+                position:"1st",
+                name:""
+            },
+            {
+                position:"2nd",
+                name:""
+            },
+            {
+                position:"3rd",
+                name:""
+            }
+        ]
     },
+
 
     {
         id:"language-game",
+
         name:"Language Game",
+
         zone:"low",
+
         stage:"Off Stage",
+
         photo:"",
-        winners:[]
+
+        winners:[
+            {
+                position:"1st",
+                name:""
+            },
+            {
+                position:"2nd",
+                name:""
+            },
+            {
+                position:"3rd",
+                name:""
+            }
+        ]
     },
+
 
     {
         id:"qiraath-mid",
+
         name:"Qira'ath",
+
         zone:"mid",
+
         stage:"Off Stage",
+
         photo:"",
-        winners:[]
+
+        winners:[
+            {
+                position:"1st",
+                name:""
+            },
+            {
+                position:"2nd",
+                name:""
+            },
+            {
+                position:"3rd",
+                name:""
+            }
+        ]
     },
+
 
     {
         id:"qiraath-low",
+
         name:"Qira'ath",
+
         zone:"low",
+
         stage:"Off Stage",
+
         photo:"",
-        winners:[]
+
+        winners:[
+            {
+                position:"1st",
+                name:""
+            },
+            {
+                position:"2nd",
+                name:""
+            },
+            {
+                position:"3rd",
+                name:""
+            }
+        ]
     },
+
 
     {
         id:"exam-high",
+
         name:"Exam Results",
+
         zone:"high",
+
         stage:"Off Stage",
+
         photo:"",
-        winners:[]
+
+        winners:[
+            {
+                position:"1st",
+                name:""
+            },
+            {
+                position:"2nd",
+                name:""
+            },
+            {
+                position:"3rd",
+                name:""
+            }
+        ]
     },
+
 
     {
         id:"exam-mid",
+
         name:"Exam Results",
+
         zone:"mid",
+
         stage:"Off Stage",
+
         photo:"",
-        winners:[]
+
+        winners:[
+            {
+                position:"1st",
+                name:""
+            },
+            {
+                position:"2nd",
+                name:""
+            },
+            {
+                position:"3rd",
+                name:""
+            }
+        ]
     },
+
 
     {
         id:"exam-low",
+
         name:"Exam Results",
+
         zone:"low",
+
         stage:"Off Stage",
+
         photo:"",
-        winners:[]
+
+        winners:[
+            {
+                position:"1st",
+                name:""
+            },
+            {
+                position:"2nd",
+                name:""
+            },
+            {
+                position:"3rd",
+                name:""
+            }
+        ]
     }
 
 ];
@@ -2346,6 +2571,7 @@ function enterSite(){
     opening.style.transform =
         "translateY(-100%)";
 
+
     setTimeout(function(){
 
         opening.style.display =
@@ -2360,13 +2586,15 @@ function enterSite(){
 }
 
 
-/* CLICK / SWIPE */
+/* CLICK OPENING */
 
 opening.addEventListener(
     "click",
     enterSite
 );
 
+
+/* SWIPE */
 
 let touchStartY = 0;
 
@@ -2389,6 +2617,7 @@ opening.addEventListener(
         let touchEndY =
             e.changedTouches[0].clientY;
 
+
         if(
             touchStartY -
             touchEndY >
@@ -2404,7 +2633,7 @@ opening.addEventListener(
 
 
 /* ==================================================
-   HOME
+   HOME → RESULT / GALLERY
 ================================================== */
 
 function openMainPage(){
@@ -2421,7 +2650,9 @@ function openMainPage(){
         .getElementById("mainPage")
         .classList.add("active");
 
+
     window.scrollTo(0,0);
+
 
     showResults();
 
@@ -2429,6 +2660,10 @@ function openMainPage(){
 
 }
 
+
+/* ==================================================
+   BACK TO HOME
+================================================== */
 
 function goHome(){
 
@@ -2440,9 +2675,11 @@ function goHome(){
         .getElementById("competitionPage")
         .classList.remove("active");
 
+
     document
         .getElementById("home")
         .classList.add("active");
+
 
     window.scrollTo(0,0);
 
@@ -2450,23 +2687,27 @@ function goHome(){
 
 
 /* ==================================================
-   RESULT / GALLERY
+   RESULT TAB
 ================================================== */
 
 function showResults(){
 
     document
         .getElementById("resultArea")
-        .style.display="block";
+        .style.display =
+        "block";
+
 
     document
         .getElementById("galleryArea")
-        .style.display="none";
+        .style.display =
+        "none";
 
 
     document
         .getElementById("resultTab")
         .classList.add("active");
+
 
     document
         .getElementById("galleryTab")
@@ -2475,24 +2716,33 @@ function showResults(){
 }
 
 
+/* ==================================================
+   GALLERY TAB
+================================================== */
+
 function showGallery(){
 
     document
         .getElementById("resultArea")
-        .style.display="none";
+        .style.display =
+        "none";
+
 
     document
         .getElementById("galleryArea")
-        .style.display="block";
+        .style.display =
+        "block";
 
 
     document
         .getElementById("resultTab")
         .classList.remove("active");
 
+
     document
         .getElementById("galleryTab")
         .classList.add("active");
+
 
     loadGallery();
 
@@ -2500,7 +2750,7 @@ function showGallery(){
 
 
 /* ==================================================
-   COMPETITION LIST
+   FILTER COMPETITIONS
 ================================================== */
 
 function filterCompetitions(){
@@ -2510,21 +2760,25 @@ function filterCompetitions(){
         .getElementById("categorySelect")
         .value;
 
+
     const list =
         document
         .getElementById("competitionList");
 
-    list.innerHTML="";
+
+    list.innerHTML = "";
 
 
     competitions
     .filter(function(comp){
 
-        if(selected==="all"){
+        if(selected === "all"){
+
             return true;
+
         }
 
-        return comp.zone===selected;
+        return comp.zone === selected;
 
     })
     .forEach(function(comp){
@@ -2532,17 +2786,19 @@ function filterCompetitions(){
         const item =
         document.createElement("div");
 
+
         item.className =
             "competition";
 
-        item.onclick=function(){
+
+        item.onclick = function(){
 
             openCompetition(comp.id);
 
         };
 
 
-        item.innerHTML=`
+        item.innerHTML = `
 
             <div class="competition-info">
 
@@ -2555,6 +2811,7 @@ function filterCompetitions(){
                 </div>
 
             </div>
+
 
             <div class="zone-badge">
                 ${zoneName(comp.zone)}
@@ -2576,17 +2833,21 @@ function filterCompetitions(){
 
 function zoneName(zone){
 
-    if(zone==="high")
+    if(zone === "high")
         return "HIGH ZONE";
 
-    if(zone==="mid")
+
+    if(zone === "mid")
         return "MID ZONE";
 
-    if(zone==="low")
+
+    if(zone === "low")
         return "LOW ZONE";
 
-    if(zone==="general")
+
+    if(zone === "general")
         return "GENERAL";
+
 
     return "";
 
@@ -2594,7 +2855,7 @@ function zoneName(zone){
 
 
 /* ==================================================
-   OPEN COMPETITION
+   OPEN COMPETITION RESULT PAGE
 ================================================== */
 
 let currentCompetition = null;
@@ -2605,11 +2866,15 @@ function openCompetition(id){
     const comp =
         competitions.find(
             function(item){
-                return item.id===id;
+
+                return item.id === id;
+
             }
         );
 
+
     if(!comp) return;
+
 
     currentCompetition = comp;
 
@@ -2618,9 +2883,11 @@ function openCompetition(id){
         .getElementById("mainPage")
         .classList.remove("active");
 
+
     document
         .getElementById("home")
         .classList.remove("active");
+
 
     document
         .getElementById("competitionPage")
@@ -2630,20 +2897,23 @@ function openCompetition(id){
     document
         .getElementById("competitionTitle")
         .textContent =
-            comp.name;
+        comp.name;
 
 
     document
         .getElementById("competitionSubtitle")
         .textContent =
-            comp.stage +
-            "  •  " +
-            zoneName(comp.zone);
+        comp.stage
+        +
+        "  •  "
+        +
+        zoneName(comp.zone);
 
 
     loadResultPhoto(comp);
 
     loadWinners(comp);
+
 
     window.scrollTo(0,0);
 
@@ -2660,9 +2930,11 @@ function loadResultPhoto(comp){
         document
         .getElementById("resultPhoto");
 
+
     const noPhoto =
         document
         .getElementById("noResultPhoto");
+
 
     const download =
         document
@@ -2674,13 +2946,19 @@ function loadResultPhoto(comp){
         photo.src =
             comp.photo;
 
-        photo.classList.remove("hidden");
+
+        photo.classList.remove(
+            "hidden"
+        );
+
 
         noPhoto.style.display =
             "none";
 
+
         download.href =
             comp.photo;
+
 
         download.style.display =
             "inline-block";
@@ -2689,12 +2967,16 @@ function loadResultPhoto(comp){
 
     else{
 
-        photo.src="";
+        photo.src = "";
 
-        photo.classList.add("hidden");
+        photo.classList.add(
+            "hidden"
+        );
+
 
         noPhoto.style.display =
             "block";
+
 
         download.style.display =
             "none";
@@ -2705,7 +2987,7 @@ function loadResultPhoto(comp){
 
 
 /* ==================================================
-   WINNERS
+   1st / 2nd / 3rd RESULT
 ================================================== */
 
 function loadWinners(comp){
@@ -2714,12 +2996,13 @@ function loadWinners(comp){
         document
         .getElementById("winners");
 
-    container.innerHTML="";
+
+    container.innerHTML = "";
 
 
     if(
         !comp.winners ||
-        comp.winners.length===0
+        comp.winners.length === 0
     ){
 
         return;
@@ -2728,23 +3011,76 @@ function loadWinners(comp){
 
 
     comp.winners.forEach(
-        function(person,index){
+        function(person){
 
             const winner =
                 document.createElement("div");
+
 
             winner.className =
                 "winner";
 
 
-            winner.innerHTML=`
+            let rankSymbol = "";
+
+
+            if(person.position === "1st"){
+
+                rankSymbol = "🥇";
+
+            }
+
+            else if(
+                person.position === "2nd"
+            ){
+
+                rankSymbol = "🥈";
+
+            }
+
+            else if(
+                person.position === "3rd"
+            ){
+
+                rankSymbol = "🥉";
+
+            }
+
+
+            winner.innerHTML = `
 
                 <div class="winner-rank">
-                    ${index+1}
+
+                    ${rankSymbol}
+
                 </div>
 
+
                 <div class="winner-name">
-                    ${person}
+
+                    <span
+                        style="
+                        display:block;
+                        font-size:9px;
+                        letter-spacing:2px;
+                        color:#d9c17a;
+                        margin-bottom:3px;
+                        "
+                    >
+
+                        ${person.position}
+
+                    </span>
+
+
+                    ${
+                        person.name
+                        ?
+                        person.name
+                        :
+                        "Result will be updated soon"
+                    }
+
                 </div>
 
             `;
@@ -2759,7 +3095,7 @@ function loadWinners(comp){
 
 
 /* ==================================================
-   DOWNLOAD
+   DOWNLOAD RESULT
 ================================================== */
 
 function downloadResult(){
@@ -2772,18 +3108,28 @@ function downloadResult(){
         const link =
             document.createElement("a");
 
+
         link.href =
             currentCompetition.photo;
 
+
         link.download =
             currentCompetition.name
-            + "-result";
+            +
+            "-result";
 
-        document.body.appendChild(link);
+
+        document
+            .body
+            .appendChild(link);
+
 
         link.click();
 
-        document.body.removeChild(link);
+
+        document
+            .body
+            .removeChild(link);
 
     }
 
@@ -2806,7 +3152,10 @@ function loadYoutube(){
         link.href =
             youtubeURL;
 
-        link.style.opacity="1";
+
+        link.style.opacity =
+            "1";
+
 
         link.style.pointerEvents =
             "auto";
@@ -2815,9 +3164,13 @@ function loadYoutube(){
 
     else{
 
-        link.href="#";
+        link.href =
+            "#";
 
-        link.style.opacity=".45";
+
+        link.style.opacity =
+            ".45";
+
 
         link.style.pointerEvents =
             "none";
@@ -2831,17 +3184,18 @@ function loadYoutube(){
    GALLERY PHOTOS
 ==================================================
 
-   ഇവിടെ photo filenames ചേർക്കുക.
-
    Example:
 
    const galleryPhotos = [
+
        "gallery1.jpg",
        "gallery2.jpg",
        "gallery3.jpg"
+
    ];
 
-*/
+================================================== */
+
 
 const galleryPhotos = [
 
@@ -2863,12 +3217,15 @@ function loadGallery(){
         document
         .getElementById("galleryGrid");
 
-    grid.innerHTML="";
+
+    grid.innerHTML = "";
 
 
-    if(galleryPhotos.length===0){
+    if(
+        galleryPhotos.length === 0
+    ){
 
-        grid.innerHTML=`
+        grid.innerHTML = `
 
             <div
                 class="empty-gallery"
@@ -2879,6 +3236,7 @@ function loadGallery(){
             </div>
 
         `;
+
 
         return;
 
@@ -2891,9 +3249,14 @@ function loadGallery(){
             const img =
                 document.createElement("img");
 
-            img.src=photo;
 
-            img.alt="Gallery Photo";
+            img.src =
+                photo;
+
+
+            img.alt =
+                "Gallery Photo";
+
 
             grid.appendChild(img);
 
@@ -2904,7 +3267,7 @@ function loadGallery(){
 
 
 /* ==================================================
-   START
+   START SITE
 ================================================== */
 
 filterCompetitions();
