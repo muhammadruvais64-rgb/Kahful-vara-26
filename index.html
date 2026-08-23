@@ -1726,23 +1726,7 @@ button{
 
         <div class="youtube-row">
 
-          <input
-            id="youtubeLink"
-            class="youtube-input"
-            type="text"
-            placeholder="YouTube video link paste ചെയ്യുക"
-          >
-
-          <button
-            class="youtube-button"
-            onclick="openYouTube()"
-          >
-
-            Open
-
-          </button>
-
-        </div>
+          </div>
 
       </div>
 
@@ -1762,15 +1746,6 @@ button{
           ഇവിടെ program photos select ചെയ്യാം.
 
         </div>
-
-        <input
-          id="galleryFiles"
-          class="photo-input"
-          type="file"
-          accept="image/*"
-          multiple
-          onchange="previewGallery(event)"
-        >
 
 
         <div
@@ -1949,18 +1924,10 @@ button{
       <div class="result-upload-box">
 
         <p>
-          Result photo upload / replace
+          Result preview
         </p>
 
-        <input
-          id="resultFile"
-          class="result-file"
-          type="file"
-          accept="image/*"
-          onchange="previewResult(event)"
-        >
-
-      </div>
+        </div>
 
 
     </div>
@@ -2103,10 +2070,10 @@ const competitions = [
 const resultData = {
 
   "qiraath-high":{
-    first:"Hafiz Zakariya",
-    second:"Hafiz Salam",
-    third:"Hafil Aaqib",
-    photo:"qiraath-high.png"
+    first:"",
+    second:"",
+    third:"",
+    photo:""
   },
 
   "speech-high":{
