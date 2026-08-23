@@ -1,2860 +1,2915 @@
 <!DOCTYPE html>
 <html lang="ml">
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>കഹ്ഫുൽ വറാ 2026</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+rel="stylesheet">
 
 <style>
 
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html{
-  scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-  font-family:'Noto Sans Malayalam',sans-serif;
-  background:#ffffff;
-  color:#173f33;
-  overflow-x:hidden;
+    font-family:'Noto Sans Malayalam',sans-serif;
+    background:#ffffff;
+    color:#173f33;
+    overflow-x:hidden;
 }
 
 button,
-select,
-input{
-  font:inherit;
+select{
+    font:inherit;
 }
 
 button{
-  cursor:pointer;
+    cursor:pointer;
 }
 
-/* =========================
-   OPENING PAGE
-========================= */
+
+/* ==================================================
+   OPENING
+================================================== */
 
 #opening{
-  position:fixed;
-  inset:0;
-  z-index:9999;
+    position:fixed;
+    inset:0;
+    z-index:99999;
 
-  display:flex;
-  align-items:center;
-  justify-content:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-  overflow:hidden;
+    overflow:hidden;
 
-  background:#071c16;
+    background:#071c16;
 
-  transition:
-    transform 1s cubic-bezier(.77,0,.18,1);
+    transition:
+        transform 1s cubic-bezier(.77,0,.18,1);
 }
 
 .opening-bg{
-  position:absolute;
-  inset:-40px;
+    position:absolute;
+    inset:-50px;
 
-  background:url("main-logo.png")
-    center/cover no-repeat;
+    background:
+        url("main-logo.png")
+        center/cover no-repeat;
 
-  filter:blur(35px);
+    filter:blur(35px);
 
-  opacity:.18;
+    opacity:.18;
 
-  transform:scale(1.15);
+    transform:scale(1.15);
 }
 
 .opening-overlay{
-  position:absolute;
-  inset:0;
+    position:absolute;
+    inset:0;
 
-  background:rgba(0,0,0,.52);
+    background:
+        linear-gradient(
+            rgba(0,0,0,.55),
+            rgba(0,0,0,.70)
+        );
 }
 
 .opening-content{
-  position:relative;
-  z-index:2;
+    position:relative;
+    z-index:5;
 
-  text-align:center;
+    text-align:center;
+
+    width:100%;
 }
 
 .opening-logo{
-  width:min(78vw,430px);
-  max-height:65vh;
+    width:min(78vw,430px);
 
-  object-fit:contain;
+    max-height:65vh;
+
+    object-fit:contain;
+
+    filter:
+        drop-shadow(
+            0 20px 35px
+            rgba(0,0,0,.45)
+        );
 }
 
 .swipe{
-  margin-top:30px;
+    margin-top:28px;
 
-  color:rgba(255,255,255,.82);
+    color:
+        rgba(255,255,255,.85);
 
-  font-family:Arial,sans-serif;
+    font-family:Arial,sans-serif;
 
-  font-size:10px;
+    font-size:10px;
 
-  letter-spacing:4px;
+    letter-spacing:4px;
 }
 
 .swipe-line{
-  width:1px;
-  height:45px;
+    width:1px;
+    height:45px;
 
-  background:
-    linear-gradient(
-      transparent,
-      white,
-      transparent
-    );
+    background:
+        linear-gradient(
+            transparent,
+            white,
+            transparent
+        );
 
-  margin:0 auto 12px;
+    margin:
+        0 auto 12px;
 
-  animation:swipe 1.6s infinite;
+    animation:
+        swipeAnimation 1.6s infinite;
 }
 
-@keyframes swipe{
+@keyframes swipeAnimation{
 
-  0%{
-    transform:translateY(-8px);
-    opacity:0;
-  }
+    0%{
+        transform:translateY(-8px);
+        opacity:0;
+    }
 
-  50%{
-    opacity:1;
-  }
+    50%{
+        opacity:1;
+    }
 
-  100%{
-    transform:translateY(8px);
-    opacity:0;
-  }
-
+    100%{
+        transform:translateY(8px);
+        opacity:0;
+    }
 }
 
 
-/* =========================
-   COMMON PAGE
-========================= */
+/* ==================================================
+   PAGES
+================================================== */
 
 .page{
-  display:none;
-  min-height:100vh;
+    display:none;
+
+    min-height:100vh;
 }
 
 .page.active{
-  display:block;
+    display:block;
 
-  animation:
-    pageIn .65s ease;
+    animation:
+        pageIn .65s ease;
 }
 
 @keyframes pageIn{
 
-  from{
-    opacity:0;
-    transform:translateY(18px);
-  }
+    from{
+        opacity:0;
+        transform:translateY(18px);
+    }
 
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 
 }
+
+
+/* ==================================================
+   GOLD DECORATION
+================================================== */
 
 .gold-line{
-  height:1px;
 
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      #c8a85b,
-      transparent
-    );
+    height:1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #c8a85b,
+            #ead99f,
+            #c8a85b,
+            transparent
+        );
 }
 
 
-/* =========================
-   HOME PAGE
-========================= */
+/* ==================================================
+   HOME
+================================================== */
 
 #home{
 
-  background:#fff;
+    background:#ffffff;
 
-  min-height:100vh;
+    min-height:100vh;
 
-  padding:
-    28px
-    16px
-    60px;
+    padding:
+        28px
+        16px
+        70px;
+
+    position:relative;
+
+    overflow:hidden;
 }
 
 .home-wrapper{
 
-  width:min(1050px,94%);
+    width:min(1050px,94%);
 
-  margin:auto;
+    margin:auto;
 }
+
+
+/* ==================================================
+   HOME BRAND BOX
+================================================== */
 
 .brand-box{
 
-  position:relative;
+    position:relative;
 
-  min-height:410px;
+    min-height:410px;
 
-  border-radius:
-    0
-    0
-    42px
-    42px;
+    border-radius:
+        0
+        0
+        42px
+        42px;
 
-  background:
-    linear-gradient(
-      145deg,
-      #164b3d,
-      #0d352b
-    );
+    background:
+        linear-gradient(
+            145deg,
+            #164b3d,
+            #0b3027
+        );
 
-  box-shadow:
+    box-shadow:
 
-    0 25px 50px
-    rgba(17,65,52,.22),
+        0 28px 60px
+        rgba(15,63,49,.24),
 
-    inset 0 1px 0
-    rgba(255,255,255,.14);
+        inset
+        0 1px 0
+        rgba(255,255,255,.16);
 
-  padding:
-    45px
-    25px
-    38px;
+    padding:
+        45px
+        25px
+        40px;
 
-  display:flex;
+    display:flex;
 
-  flex-direction:column;
+    flex-direction:column;
 
-  align-items:center;
+    align-items:center;
 
-  justify-content:center;
+    justify-content:center;
 
-  overflow:hidden;
+    overflow:hidden;
 }
 
-.brand-box:before{
+.brand-box::before{
 
-  content:"";
+    content:"";
 
-  position:absolute;
+    position:absolute;
 
-  inset:12px;
+    inset:12px;
 
-  border:
-    1px solid
-    rgba(210,175,92,.7);
+    border:
+        1px solid
+        rgba(210,175,92,.75);
 
-  border-radius:
-    0
-    0
-    32px
-    32px;
+    border-radius:
+        0
+        0
+        32px
+        32px;
 
-  pointer-events:none;
+    pointer-events:none;
 }
 
-.brand-box:after{
+.brand-box::after{
 
-  content:"";
+    content:"";
 
-  position:absolute;
+    position:absolute;
 
-  width:180px;
-  height:180px;
+    width:220px;
+    height:220px;
 
-  border-radius:50%;
+    border-radius:50%;
 
-  background:
-    rgba(216,193,122,.08);
+    background:
+        rgba(218,193,122,.08);
 
-  filter:blur(5px);
+    filter:blur(8px);
 
-  top:-90px;
-  right:-70px;
+    top:-110px;
+    right:-80px;
 }
 
 .brand-logos{
 
-  width:100%;
+    width:100%;
 
-  display:flex;
+    display:flex;
 
-  justify-content:center;
+    justify-content:center;
 
-  align-items:center;
+    align-items:center;
 
-  gap:
-    clamp(
-      20px,
-      7vw,
-      80px
-    );
+    gap:
+        clamp(
+            20px,
+            7vw,
+            80px
+        );
 
-  position:relative;
+    position:relative;
 
-  z-index:2;
+    z-index:2;
 }
 
 .logo-card{
 
-  width:42%;
+    width:42%;
 
-  max-width:320px;
+    max-width:320px;
 
-  display:flex;
+    display:flex;
 
-  justify-content:center;
+    justify-content:center;
 
-  align-items:center;
+    align-items:center;
 }
 
 .logo-card img{
 
-  width:100%;
+    width:100%;
 
-  max-height:230px;
+    max-height:230px;
 
-  object-fit:contain;
+    object-fit:contain;
+
+    filter:
+        drop-shadow(
+            0 12px 18px
+            rgba(0,0,0,.20)
+        );
 }
+
+
+/* ==================================================
+   DESCRIPTION
+================================================== */
 
 .brand-description{
 
-  position:relative;
+    position:relative;
 
-  z-index:2;
+    z-index:2;
 
-  margin-top:32px;
+    margin-top:32px;
 
-  text-align:center;
+    text-align:center;
 
-  color:#fff;
+    color:#ffffff;
 
-  font-family:
-    'Playfair Display',
-    serif;
+    font-family:
+        'Playfair Display',
+        serif;
 
-  font-size:
-    clamp(
-      13px,
-      3vw,
-      20px
-    );
+    font-size:
+        clamp(
+            13px,
+            3vw,
+            20px
+        );
 
-  letter-spacing:1.2px;
+    letter-spacing:1.2px;
 }
 
 .brand-description span{
 
-  color:#d9c17a;
+    color:#d9c17a;
 }
+
+
+/* ==================================================
+   RESULT HOME BUTTON
+================================================== */
 
 .home-result{
 
-  margin-top:35px;
+    margin-top:35px;
 
-  display:flex;
+    display:flex;
 
-  justify-content:flex-start;
+    justify-content:flex-start;
 }
 
 .result-home-button{
 
-  border:
-    1px solid
-    rgba(200,168,91,.7);
+    border:
+        1px solid
+        rgba(200,168,91,.75);
 
-  color:#fff;
+    color:#ffffff;
 
-  background:
-    linear-gradient(
-      145deg,
-      #174f40,
-      #0d362c
-    );
+    background:
+        linear-gradient(
+            145deg,
+            #174f40,
+            #0d362c
+        );
 
-  padding:
-    18px
-    38px;
+    padding:
+        18px
+        40px;
 
-  border-radius:18px;
+    border-radius:18px;
 
-  box-shadow:
+    box-shadow:
 
-    0 15px 30px
-    rgba(16,64,51,.2),
+        0 18px 35px
+        rgba(16,64,51,.22),
 
-    inset 0 1px 0
-    rgba(255,255,255,.12);
+        inset
+        0 1px 0
+        rgba(255,255,255,.13);
 
-  font-family:
-    'Playfair Display',
-    serif;
+    font-family:
+        'Playfair Display',
+        serif;
 
-  font-size:21px;
+    font-size:21px;
 
-  transition:.3s;
+    transition:.3s;
 }
 
 .result-home-button:hover{
 
-  transform:
-    translateY(-4px);
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 25px 45px
+        rgba(16,64,51,.28);
 }
 
 .result-home-button small{
 
-  display:block;
+    display:block;
 
-  margin-top:3px;
+    margin-top:3px;
 
-  font-family:Arial,sans-serif;
+    font-family:Arial,sans-serif;
 
-  font-size:9px;
+    font-size:9px;
 
-  letter-spacing:2px;
+    letter-spacing:2px;
 
-  color:#d9c17a;
+    color:#d9c17a;
 }
 
 
-/* =========================
+/* ==================================================
+   RESPONSIVE HOME
+================================================== */
+
+@media(max-width:650px){
+
+    #home{
+        padding:
+            18px
+            10px
+            60px;
+    }
+
+    .home-wrapper{
+        width:100%;
+    }
+
+    .brand-box{
+        min-height:360px;
+
+        padding:
+            35px
+            15px
+            35px;
+    }
+
+    .brand-logos{
+
+        gap:12px;
+
+    }
+
+    .logo-card{
+
+        width:45%;
+    }
+
+    .logo-card img{
+
+        max-height:180px;
+    }
+
+    .brand-description{
+
+        font-size:13px;
+
+        margin-top:24px;
+    }
+
+    .result-home-button{
+
+        width:100%;
+
+        text-align:center;
+    }
+
+}
+
+  </style><style>
+
+/* ==================================================
    RESULT / GALLERY PAGE
-========================= */
+================================================== */
 
 #mainPage{
 
-  background:
-    linear-gradient(
-      180deg,
-      #f7fbf9,
-      #fff 35%,
-      #f5f8f6
-    );
+    background:
+        linear-gradient(
+            180deg,
+            #f7fbf9 0%,
+            #ffffff 45%,
+            #f4f8f6 100%
+        );
 
-  padding:
-    22px
-    16px
-    60px;
+    padding:
+        22px
+        16px
+        70px;
+
+    min-height:100vh;
 }
 
 .main-wrapper{
 
-  width:min(1050px,94%);
+    width:min(1050px,94%);
 
-  margin:auto;
+    margin:auto;
 }
+
+
+/* BACK BUTTON */
 
 .back-button{
 
-  border:
-    1px solid
-    #d4ddd8;
+    border:
+        1px solid
+        #d3ded8;
 
-  background:white;
+    background:#ffffff;
 
-  color:#285446;
+    color:#285446;
 
-  padding:
-    10px
-    18px;
+    padding:
+        10px
+        18px;
 
-  border-radius:50px;
+    border-radius:50px;
 
-  box-shadow:
-    0 6px 16px
-    rgba(0,0,0,.06);
+    box-shadow:
+        0 7px 18px
+        rgba(0,0,0,.06);
+
+    transition:.3s;
 }
+
+.back-button:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 12px 22px
+        rgba(0,0,0,.10);
+}
+
+
+/* HEADING */
 
 .main-heading{
 
-  text-align:center;
+    text-align:center;
 
-  padding:
-    35px
-    0
-    25px;
+    padding:
+        35px
+        0
+        25px;
 }
 
 .main-heading h1{
 
-  font-family:
-    'Playfair Display',
-    serif;
+    font-family:
+        'Playfair Display',
+        serif;
 
-  font-size:
-    clamp(
-      32px,
-      7vw,
-      55px
-    );
+    font-size:
+        clamp(
+            32px,
+            7vw,
+            55px
+        );
 
-  color:#173f33;
+    color:#173f33;
 }
 
 .main-heading p{
 
-  margin-top:7px;
+    margin-top:8px;
 
-  color:#76827c;
+    color:#7a8580;
 
-  font-size:12px;
+    font-family:Arial,sans-serif;
 
-  letter-spacing:2px;
+    font-size:10px;
+
+    letter-spacing:3px;
 }
 
 
-/* =========================
-   RESULT / GALLERY TABS
-========================= */
+/* ==================================================
+   TABS
+================================================== */
 
 .tabs{
 
-  width:min(620px,100%);
+    width:min(620px,100%);
 
-  margin:
-    0
-    auto
-    30px;
+    margin:
+        0
+        auto
+        30px;
 
-  padding:5px;
+    padding:5px;
 
-  display:flex;
+    display:flex;
 
-  background:#e5eee9;
+    background:#e5eee9;
 
-  border-radius:20px;
+    border-radius:20px;
 
-  box-shadow:
-    inset
-    0 2px 5px
-    rgba(0,0,0,.07);
+    box-shadow:
+        inset
+        0 2px 6px
+        rgba(0,0,0,.08);
 }
 
 .tab{
 
-  flex:1;
+    flex:1;
 
-  border:none;
+    border:none;
 
-  padding:15px;
+    padding:15px;
 
-  border-radius:15px;
+    border-radius:15px;
 
-  background:transparent;
+    background:transparent;
 
-  color:#6d7974;
+    color:#6d7974;
 
-  font-size:15px;
+    font-size:15px;
 
-  font-weight:600;
+    font-weight:600;
 
-  transition:.3s;
+    transition:.3s;
 }
 
 .tab.active{
 
-  background:#164b3d;
+    background:
+        linear-gradient(
+            145deg,
+            #164b3d,
+            #0d352b
+        );
 
-  color:white;
+    color:#ffffff;
 
-  box-shadow:
-    0 8px 18px
-    rgba(22,75,61,.2);
+    box-shadow:
+        0 9px 20px
+        rgba(22,75,61,.22);
+}
+
+.tab:hover{
+
+    color:#173f33;
 }
 
 
-/* =========================
-   RESULT LIST
-========================= */
+/* ==================================================
+   RESULT AREA
+================================================== */
 
 .result-area{
 
-  padding-bottom:30px;
+    padding-bottom:30px;
 }
+
+
+/* CATEGORY */
 
 .category-box{
 
-  background:white;
+    background:#ffffff;
 
-  padding:18px;
+    padding:20px;
 
-  border-radius:20px;
+    border-radius:22px;
 
-  box-shadow:
-    0 12px 30px
-    rgba(25,70,55,.07);
+    box-shadow:
+        0 14px 35px
+        rgba(25,70,55,.08);
 
-  border:
-    1px solid
-    #e0e8e3;
+    border:
+        1px solid
+        #e0e8e3;
 
-  margin-bottom:25px;
+    margin-bottom:25px;
+
+    position:relative;
+}
+
+.category-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:15%;
+    right:15%;
+
+    height:1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #c8a85b,
+            transparent
+        );
 }
 
 .category-box label{
 
-  display:block;
+    display:block;
 
-  font-size:12px;
+    font-size:12px;
 
-  color:#6f7b76;
+    color:#6f7b76;
 
-  margin-bottom:8px;
+    margin-bottom:9px;
 }
 
 .category-select{
 
-  width:100%;
+    width:100%;
 
-  border:
-    1px solid
-    #d7e0db;
+    border:
+        1px solid
+        #d7e0db;
 
-  background:#fafcfb;
+    background:#fafcfb;
 
-  border-radius:13px;
+    border-radius:14px;
 
-  padding:14px;
+    padding:14px;
 
-  color:#244c40;
+    color:#244c40;
 
-  font-size:14px;
+    font-size:14px;
+
+    outline:none;
 }
+
+.category-select:focus{
+
+    border-color:#c8a85b;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(200,168,91,.10);
+}
+
+
+/* ==================================================
+   COMPETITIONS
+================================================== */
 
 .competition-list{
 
-  display:grid;
+    display:grid;
 
-  gap:13px;
+    gap:13px;
 }
 
 .competition{
 
-  position:relative;
+    position:relative;
 
-  display:flex;
+    display:flex;
 
-  justify-content:space-between;
+    justify-content:space-between;
 
-  align-items:center;
+    align-items:center;
 
-  gap:15px;
+    gap:15px;
 
-  background:white;
+    background:#ffffff;
 
-  padding:20px;
+    padding:20px;
 
-  border-radius:18px;
+    border-radius:18px;
 
-  border:
-    1px solid
-    #e1e8e4;
+    border:
+        1px solid
+        #e1e8e4;
 
-  box-shadow:
-    0 9px 25px
-    rgba(20,65,52,.065);
+    box-shadow:
+        0 9px 25px
+        rgba(20,65,52,.065);
 
-  transition:.3s;
+    transition:.3s;
+
+    overflow:hidden;
+}
+
+.competition::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:0;
+    bottom:0;
+
+    width:3px;
+
+    background:
+        linear-gradient(
+            #c8a85b,
+            #ead99f,
+            #c8a85b
+        );
 }
 
 .competition:hover{
 
-  transform:
-    translateY(-3px);
+    transform:
+        translateY(-3px);
 
-  box-shadow:
-    0 16px 30px
-    rgba(20,65,52,.12);
+    box-shadow:
+        0 17px 32px
+        rgba(20,65,52,.13);
 }
 
 .competition-info{
 
-  min-width:0;
+    min-width:0;
+
+    padding-left:5px;
 }
 
 .stage-label{
 
-  display:block;
+    display:block;
 
-  color:#8b9691;
+    color:#8b9691;
 
-  font-family:Arial,sans-serif;
+    font-family:Arial,sans-serif;
 
-  font-size:9px;
+    font-size:9px;
 
-  letter-spacing:1.5px;
+    letter-spacing:1.5px;
 
-  text-transform:uppercase;
+    text-transform:uppercase;
 
-  margin-bottom:5px;
+    margin-bottom:5px;
 }
 
 .competition-name{
 
-  font-size:17px;
+    font-size:17px;
 
-  color:#24483d;
+    color:#24483d;
+
+    line-height:1.5;
 }
 
 .zone-badge{
 
-  flex-shrink:0;
+    flex-shrink:0;
 
-  background:#edf5f1;
+    background:#edf5f1;
 
-  color:#28604e;
+    color:#28604e;
 
-  padding:
-    7px
-    12px;
+    padding:
+        7px
+        12px;
 
-  border-radius:50px;
+    border-radius:50px;
 
-  font-family:Arial,sans-serif;
+    font-family:Arial,sans-serif;
 
-  font-size:9px;
+    font-size:9px;
 
-  letter-spacing:1px;
+    letter-spacing:1px;
 }
 
 
-/* =========================
+/* ==================================================
    GALLERY
-========================= */
+================================================== */
 
 .gallery-area{
 
-  display:none;
+    display:none;
+
+    padding-bottom:30px;
 }
+
+
+/* LIVE */
 
 .gallery-live{
 
-  background:white;
+    background:#ffffff;
 
-  border:
-    1px solid
-    #e0e8e3;
+    border:
+        1px solid
+        #e0e8e3;
 
-  border-radius:22px;
+    border-radius:22px;
 
-  padding:20px;
+    padding:22px;
 
-  box-shadow:
-    0 12px 30px
-    rgba(25,70,55,.07);
+    box-shadow:
+        0 14px 35px
+        rgba(25,70,55,.08);
 
-  margin-bottom:24px;
+    margin-bottom:24px;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.gallery-live::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:15%;
+    right:15%;
+
+    height:1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #c8a85b,
+            transparent
+        );
 }
 
 .live-title{
 
-  display:flex;
+    display:flex;
 
-  align-items:center;
+    align-items:center;
 
-  gap:9px;
+    gap:9px;
 
-  margin-bottom:15px;
+    margin-bottom:17px;
 
-  font-weight:700;
+    font-weight:700;
 
-  color:#173f33;
+    color:#173f33;
 }
 
 .live-dot{
 
-  width:9px;
-  height:9px;
+    width:9px;
+    height:9px;
 
-  border-radius:50%;
+    border-radius:50%;
 
-  background:#d14d4d;
+    background:#d14d4d;
 
-  box-shadow:
-    0 0 0 5px
-    rgba(209,77,77,.12);
+    box-shadow:
+        0 0 0 5px
+        rgba(209,77,77,.12);
 }
 
-.youtube-row{
 
-  display:flex;
+/* YOUTUBE */
 
-  gap:10px;
+.youtube-box{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-height:130px;
+
+    border-radius:18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f8fbfa,
+            #eef5f1
+        );
+
+    border:
+        1px solid
+        #e1e8e4;
 }
 
-.youtube-input{
+.youtube-link{
 
-  flex:1;
+    width:70px;
+    height:50px;
 
-  min-width:0;
+    border-radius:15px;
 
-  border:
-    1px solid
-    #d7e0db;
+    background:#ff0000;
 
-  border-radius:13px;
+    display:flex;
 
-  padding:13px;
+    align-items:center;
 
-  outline:none;
+    justify-content:center;
+
+    text-decoration:none;
+
+    box-shadow:
+        0 12px 25px
+        rgba(255,0,0,.20);
+
+    transition:.3s;
 }
 
-.youtube-button{
+.youtube-link:hover{
 
-  border:
-    1px solid
-    rgba(200,168,91,.7);
-
-  background:#164b3d;
-
-  color:white;
-
-  padding:
-    13px
-    18px;
-
-  border-radius:13px;
+    transform:
+        scale(1.08)
+        translateY(-2px);
 }
 
-.gallery-upload{
+.youtube-play{
 
-  background:white;
+    width:0;
+    height:0;
 
-  border:
-    1px solid
-    #e0e8e3;
+    border-top:
+        9px solid transparent;
 
-  border-radius:22px;
+    border-bottom:
+        9px solid transparent;
 
-  padding:20px;
+    border-left:
+        14px solid white;
 
-  box-shadow:
-    0 12px 30px
-    rgba(25,70,55,.07);
+    margin-left:4px;
 }
 
-.upload-title{
 
-  font-weight:700;
+/* GALLERY PHOTOS */
 
-  margin-bottom:8px;
+.gallery-photos{
+
+    background:#ffffff;
+
+    border:
+        1px solid
+        #e0e8e3;
+
+    border-radius:22px;
+
+    padding:22px;
+
+    box-shadow:
+        0 14px 35px
+        rgba(25,70,55,.08);
 }
 
-.upload-note{
+.gallery-photo-title{
 
-  font-size:12px;
+    font-weight:700;
 
-  color:#78847e;
+    margin-bottom:5px;
 
-  margin-bottom:14px;
+    color:#173f33;
 }
 
-.photo-input{
+.gallery-photo-subtitle{
 
-  width:100%;
+    font-size:11px;
 
-  border:
-    1px dashed
-    #c8a85b;
+    color:#78847e;
 
-  border-radius:15px;
-
-  padding:16px;
-
-  background:#fffdf7;
+    margin-bottom:17px;
 }
 
 .photo-grid{
 
-  display:grid;
+    display:grid;
 
-  grid-template-columns:
-    repeat(3,1fr);
+    grid-template-columns:
+        repeat(3,1fr);
 
-  gap:12px;
-
-  margin-top:18px;
+    gap:12px;
 }
 
 .photo-grid img{
 
-  width:100%;
+    width:100%;
 
-  aspect-ratio:1/1;
+    aspect-ratio:1/1;
 
-  object-fit:cover;
+    object-fit:cover;
 
-  border-radius:15px;
+    border-radius:15px;
 
-  border:
-    1px solid
-    #e4d6ad;
-}/* =========================
+    border:
+        1px solid
+        #e4d6ad;
+
+    box-shadow:
+        0 8px 18px
+        rgba(0,0,0,.07);
+}
+
+.empty-gallery{
+
+    padding:35px 10px;
+
+    text-align:center;
+
+    color:#8a9590;
+
+    font-size:13px;
+}
+
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media(max-width:650px){
+
+    #mainPage{
+
+        padding:
+            18px
+            10px
+            60px;
+    }
+
+    .main-wrapper{
+
+        width:100%;
+    }
+
+    .competition{
+
+        padding:17px;
+    }
+
+    .competition-name{
+
+        font-size:15px;
+    }
+
+    .zone-badge{
+
+        padding:
+            6px
+            9px;
+
+        font-size:8px;
+    }
+
+    .photo-grid{
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .tabs{
+
+        margin-bottom:22px;
+    }
+
+    .tab{
+
+        padding:13px 8px;
+
+        font-size:13px;
+    }
+
+}
+
+  </style><style>
+
+/* ==================================================
    COMPETITION RESULT PAGE
-========================= */
+================================================== */
 
 #competitionPage{
 
-  background:
-    linear-gradient(
-      145deg,
-      #f4f8ff,
-      #ffffff
-    );
+    background:
+        linear-gradient(
+            145deg,
+            #f3f7ff,
+            #ffffff 55%,
+            #f4f7fc
+        );
 
-  min-height:100vh;
+    min-height:100vh;
+
+    padding:
+        22px
+        16px
+        80px;
 }
 
 .competition-result-wrapper{
 
-  width:min(950px,92%);
+    width:min(950px,92%);
 
-  margin:auto;
-
-  padding:
-    25px
-    0
-    80px;
+    margin:auto;
 }
+
+
+/* BACK */
+
+.comp-back{
+
+    border:
+        1px solid
+        #d7dfe9;
+
+    background:#ffffff;
+
+    color:#23486b;
+
+    padding:
+        10px
+        18px;
+
+    border-radius:50px;
+
+    box-shadow:
+        0 7px 18px
+        rgba(0,0,0,.06);
+}
+
+
+/* BLUE CARD */
 
 .blue-card{
 
-  position:relative;
+    position:relative;
 
-  margin-top:25px;
+    margin-top:25px;
 
-  padding:
-    35px
-    20px;
+    padding:
+        35px
+        20px
+        45px;
 
-  background:
-    linear-gradient(
-      145deg,
-      #0b376d,
-      #071f43
-    );
+    background:
+        linear-gradient(
+            145deg,
+            #0b376d,
+            #071f43
+        );
 
-  color:white;
+    color:#ffffff;
 
-  border-radius:28px;
+    border-radius:28px;
 
-  box-shadow:
-    0 25px 55px
-    rgba(8,47,91,.25);
+    box-shadow:
+        0 28px 60px
+        rgba(8,47,91,.25);
 
-  overflow:hidden;
+    overflow:hidden;
 }
 
-.blue-card:after{
+.blue-card::before{
 
-  content:"";
+    content:"";
 
-  position:absolute;
+    position:absolute;
 
-  inset:12px;
+    width:250px;
+    height:250px;
 
-  border:
-    1px solid
-    rgba(210,175,92,.75);
+    border-radius:50%;
 
-  border-radius:20px;
+    background:
+        rgba(255,255,255,.045);
 
-  pointer-events:none;
+    top:-120px;
+    right:-100px;
+}
+
+.blue-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:12px;
+
+    border:
+        1px solid
+        rgba(210,175,92,.75);
+
+    border-radius:20px;
+
+    pointer-events:none;
 }
 
 
-/* =========================
-   DOWNLOAD BUTTON
-========================= */
+/* DOWNLOAD */
 
 .download-button{
 
-  position:absolute;
+    position:absolute;
 
-  z-index:3;
+    z-index:5;
 
-  top:22px;
+    top:22px;
+    right:22px;
 
-  right:22px;
+    border:
+        1px solid
+        rgba(255,255,255,.35);
 
-  border:
-    1px solid
-    rgba(255,255,255,.35);
+    background:
+        rgba(255,255,255,.12);
 
-  background:
-    rgba(255,255,255,.12);
+    color:#ffffff;
 
-  color:white;
+    padding:
+        9px
+        14px;
 
-  padding:
-    9px
-    14px;
+    border-radius:50px;
 
-  border-radius:50px;
+    font-size:11px;
 
-  font-size:11px;
-
-  transition:.3s;
+    transition:.3s;
 }
 
 .download-button:hover{
 
-  background:
-    rgba(255,255,255,.2);
+    background:
+        rgba(255,255,255,.20);
 
-  transform:
-    translateY(-2px);
+    transform:
+        translateY(-2px);
 }
 
 
-/* =========================
-   COMPETITION TITLE
-========================= */
+/* TITLE */
 
 .comp-result-title{
 
-  position:relative;
+    position:relative;
 
-  z-index:2;
+    z-index:2;
 
-  text-align:center;
+    text-align:center;
 
-  font-family:
-    'Playfair Display',
-    serif;
+    font-family:
+        'Playfair Display',
+        serif;
 
-  font-size:
-    clamp(
-      27px,
-      7vw,
-      45px
-    );
+    font-size:
+        clamp(
+            27px,
+            7vw,
+            45px
+        );
 
-  padding:
-    35px
-    70px
-    20px;
+    padding:
+        35px
+        70px
+        20px;
+}
+
+.comp-result-subtitle{
+
+    position:relative;
+
+    z-index:2;
+
+    text-align:center;
+
+    color:#b9cde5;
+
+    font-size:11px;
+
+    letter-spacing:2px;
+
+    margin-bottom:25px;
 }
 
 
-/* =========================
-   RESULT PHOTO PREVIEW
-========================= */
-
-.result-photo-area{
-
-  position:relative;
-
-  z-index:2;
-
-  margin:
-    18px
-    auto
-    0;
-
-  width:min(
-    850px,
-    100%
-  );
-
-  text-align:center;
-}
-
-.preview-label{
-
-  color:#e4cc82;
-
-  font-family:Arial,sans-serif;
-
-  font-size:10px;
-
-  letter-spacing:2px;
-
-  margin-bottom:10px;
-
-  text-transform:uppercase;
-}
-
-
-/*
+/* ==================================================
    RESULT PHOTO
+================================================== */
 
-   Upload ചെയ്ത photo
-   ഈ separate competition page-ൽ
-   വലിയ preview ആയി കാണും.
-*/
+.result-photo-box{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:760px;
+
+    margin:
+        10px
+        auto
+        0;
+
+    background:
+        rgba(255,255,255,.08);
+
+    border:
+        1px solid
+        rgba(255,255,255,.14);
+
+    border-radius:20px;
+
+    padding:15px;
+
+    box-shadow:
+        0 15px 35px
+        rgba(0,0,0,.15);
+}
 
 .result-photo{
 
-  display:none;
+    width:100%;
 
-  width:100%;
+    display:block;
 
-  max-height:78vh;
+    border-radius:13px;
 
-  object-fit:contain;
+    background:#ffffff;
 
-  border-radius:18px;
+    max-height:75vh;
 
-  border:
-    1px solid
-    rgba(228,204,130,.55);
+    object-fit:contain;
+}
 
-  box-shadow:
-    0 18px 45px
-    rgba(0,0,0,.28);
+.result-photo.hidden{
 
-  background:#ffffff;
+    display:none;
 }
 
 
-/* =========================
-   NOT UPLOADED MESSAGE
-========================= */
+/* NO PHOTO */
 
 .not-uploaded{
 
-  min-height:220px;
+    position:relative;
 
-  display:flex;
+    z-index:2;
 
-  align-items:center;
+    text-align:center;
 
-  justify-content:center;
+    padding:
+        45px
+        10px;
 
-  padding:30px 10px;
+    color:#dce8f7;
 
-  color:#dce8f7;
-
-  font-size:14px;
-
-  border:
-    1px dashed
-    rgba(255,255,255,.25);
-
-  border-radius:18px;
-
-  background:
-    rgba(255,255,255,.05);
+    font-size:14px;
 }
 
 
-/* =========================
-   RESULT PHOTO UPLOAD
-========================= */
-
-.result-upload-box{
-
-  position:relative;
-
-  z-index:2;
-
-  margin:
-    20px
-    auto
-    0;
-
-  max-width:600px;
-
-  background:
-    rgba(255,255,255,.09);
-
-  border:
-    1px dashed
-    rgba(255,255,255,.35);
-
-  border-radius:16px;
-
-  padding:16px;
-
-  text-align:center;
-}
-
-.result-upload-box p{
-
-  font-size:11px;
-
-  color:#dce8f7;
-
-  margin-bottom:10px;
-}
-
-.result-file{
-
-  width:100%;
-
-  font-size:11px;
-
-  color:white;
-}
-
-
-/* =========================
+/* ==================================================
    WINNERS
-========================= */
+================================================== */
 
 .winners{
 
-  position:relative;
+    position:relative;
 
-  z-index:2;
+    z-index:2;
 
-  display:grid;
+    display:grid;
 
-  gap:13px;
+    gap:13px;
 
-  margin-top:20px;
+    margin-top:20px;
 }
 
 .winner{
 
-  background:
-    rgba(255,255,255,.10);
+    background:
+        rgba(255,255,255,.10);
 
-  border:
-    1px solid
-    rgba(255,255,255,.16);
+    border:
+        1px solid
+        rgba(255,255,255,.16);
 
-  border-radius:15px;
+    border-radius:15px;
 
-  padding:17px;
+    padding:17px;
 
-  display:flex;
+    display:flex;
 
-  align-items:center;
+    align-items:center;
 
-  justify-content:space-between;
-
-  gap:12px;
+    gap:15px;
 }
 
-.rank{
+.winner-rank{
 
-  font-family:
-    'Playfair Display',
-    serif;
+    width:42px;
+    height:42px;
 
-  color:#e4cc82;
+    flex-shrink:0;
 
-  font-size:23px;
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #d9bd70,
+            #a98b43
+        );
+
+    color:#102c4c;
+
+    font-weight:700;
 }
 
+.winner-name{
 
-/* =========================
-   BACK BUTTON
-========================= */
+    font-size:15px;
 
-.back-main{
-
-  border:
-    1px solid
-    #d2dce8;
-
-  background:white;
-
-  color:#17446f;
-
-  padding:
-    10px
-    18px;
-
-  border-radius:50px;
-
-  margin-bottom:10px;
-
-  transition:.3s;
-}
-
-.back-main:hover{
-
-  transform:
-    translateY(-2px);
-
-  box-shadow:
-    0 8px 18px
-    rgba(0,0,0,.08);
+    color:#ffffff;
 }
 
 
-/* =========================
+/* ==================================================
+   DOWNLOAD FULL PHOTO BUTTON
+================================================== */
+
+.full-download{
+
+    position:relative;
+
+    z-index:3;
+
+    display:inline-block;
+
+    margin:
+        25px
+        auto
+        0;
+
+    padding:
+        13px
+        22px;
+
+    border-radius:13px;
+
+    border:
+        1px solid
+        rgba(210,175,92,.8);
+
+    background:
+        rgba(255,255,255,.10);
+
+    color:#ffffff;
+
+    text-decoration:none;
+
+    font-size:13px;
+
+    transition:.3s;
+}
+
+.full-download:hover{
+
+    background:
+        rgba(255,255,255,.18);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media(max-width:650px){
+
+    #competitionPage{
+
+        padding:
+            18px
+            10px
+            60px;
+    }
+
+    .competition-result-wrapper{
+
+        width:100%;
+    }
+
+    .blue-card{
+
+        padding:
+            25px
+            12px
+            35px;
+    }
+
+    .comp-result-title{
+
+        padding:
+            50px
+            10px
+            15px;
+    }
+
+    .download-button{
+
+        top:15px;
+        right:15px;
+    }
+
+    .result-photo-box{
+
+        margin-left:0;
+        margin-right:0;
+    }
+
+}
+
+  </style><style>
+
+/* ==================================================
    FOOTER
-========================= */
+================================================== */
 
 .site-footer{
 
-  background:#fff;
+    background:#ffffff;
 
-  text-align:center;
+    text-align:center;
 
-  padding:
-    45px
-    20px
-    20px;
+    padding:
+        60px
+        20px
+        35px;
 
-  margin-top:40px;
-
-  border-top:
-    1px solid
-    #e8e8e8;
+    border-top:
+        1px solid
+        #eee7d2;
 }
 
-.footer-name{
+.footer-title{
 
-  font-family:
-    'Playfair Display',
-    serif;
+    font-family:
+        'Playfair Display',
+        serif;
 
-  font-size:20px;
+    font-size:20px;
 
-  color:#173f33;
+    color:#173f33;
+
+    letter-spacing:1px;
 }
 
 .footer-phone{
 
-  margin-top:7px;
+    margin-top:8px;
 
-  color:#50635b;
+    font-family:Arial,sans-serif;
+
+    font-size:14px;
+
+    color:#5e6d66;
 }
 
-.footer-place{
+.footer-location{
 
-  margin-top:6px;
+    margin-top:8px;
 
-  font-size:12px;
+    font-family:Arial,sans-serif;
 
-  color:#7a8580;
+    font-size:12px;
+
+    color:#7b8781;
+
+    letter-spacing:.5px;
 }
 
-.ruvaissss{
+.footer-credit{
 
-  margin-top:25px;
+    margin-top:25px;
 
-  text-align:right;
+    text-align:right;
 
-  font-family:Arial,sans-serif;
+    font-family:Arial,sans-serif;
 
-  font-size:7px;
+    font-size:6px;
 
-  letter-spacing:1px;
-
-  color:#b8b8b8;
+    color:#c9c9c9;
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+/* ==================================================
+   DATA / JAVASCRIPT
+================================================== */
 
-@media(max-width:650px){
+</style>
 
-  .brand-box{
-
-    min-height:350px;
-
-    padding:
-      35px
-      15px;
-  }
-
-  .brand-logos{
-
-    gap:12px;
-  }
-
-  .logo-card{
-
-    width:45%;
-  }
-
-  .logo-card img{
-
-    max-height:180px;
-  }
-
-  .brand-description{
-
-    margin-top:22px;
-  }
-
-  .home-result{
-
-    justify-content:flex-start;
-  }
-
-  .result-home-button{
-
-    padding:
-      16px
-      28px;
-  }
-
-  .youtube-row{
-
-    flex-direction:column;
-  }
-
-  .photo-grid{
-
-    grid-template-columns:
-      repeat(2,1fr);
-  }
-
-  .competition{
-
-    padding:17px;
-  }
-
-  .competition-name{
-
-    font-size:15px;
-  }
-
-  .zone-badge{
-
-    font-size:8px;
-
-    padding:
-      6px
-      9px;
-  }
-
-  .comp-result-title{
-
-    padding:
-      35px
-      65px
-      20px;
-  }
-
-  .download-button{
-
-    top:18px;
-
-    right:18px;
-  }
-
-  }</style>
 </head>
 
 <body>
 
-<!-- =====================================================
-     OPENING PAGE
-===================================================== -->
+
+<!-- ==================================================
+     OPENING
+================================================== -->
 
 <section id="opening">
 
-  <div class="opening-bg"></div>
+    <div class="opening-bg"></div>
 
-  <div class="opening-overlay"></div>
+    <div class="opening-overlay"></div>
 
-  <div class="opening-content">
-
-    <img
-      src="main-logo.png"
-      class="opening-logo"
-      alt="Nabidina Main Logo"
-    >
-
-    <div class="swipe">
-
-      <div class="swipe-line"></div>
-
-      SWIPE UP
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =====================================================
-     HOME PAGE
-===================================================== -->
-
-<section id="home" class="page">
-
-  <div class="home-wrapper">
-
-    <div class="brand-box">
-
-      <div class="brand-logos">
-
-        <!-- MAIN LOGO -->
-
-        <div class="logo-card">
-
-          <img
-            src="main-logo.png"
-            alt="Main Logo"
-          >
-
-        </div>
-
-
-        <!-- DARS LOGO -->
-
-        <div class="logo-card">
-
-          <img
-            src="dars-logo.png"
-            alt="Dars Logo"
-          >
-
-        </div>
-
-      </div>
-
-
-      <div class="brand-description">
-
-        dedicating
-
-        <span>
-          BADRUL HUDHA DA'AWA DARS
-        </span>
-
-      </div>
-
-    </div>
-
-
-    <!-- RESULT BUTTON -->
-
-    <div class="home-result">
-
-      <button
-        class="result-home-button"
-        onclick="openMainPage()"
-      >
-
-        Result
-
-        <small>
-          RESULTS &amp; GALLERY
-        </small>
-
-      </button>
-
-    </div>
-
-  </div>
-
-
-  <!-- FOOTER -->
-
-  <footer class="site-footer">
-
-    <div class="footer-name">
-      BADRUL HUDHA DA'AWA DARS
-    </div>
-
-    <div class="footer-phone">
-      +91 9496931381
-    </div>
-
-    <div class="footer-place">
-      Ziyarathingara &nbsp; Kanhanghad &nbsp; Kasaragod (dist)
-    </div>
-
-    <div class="ruvaissss">
-      Ruvaissss
-    </div>
-
-  </footer>
-
-</section>
-
-
-<!-- =====================================================
-     RESULT / GALLERY PAGE
-===================================================== -->
-
-<section id="mainPage" class="page">
-
-  <div class="main-wrapper">
-
-
-    <!-- BACK -->
-
-    <button
-      class="back-button"
-      onclick="openHome()"
-    >
-
-      ← Home
-
-    </button>
-
-
-    <!-- HEADING -->
-
-    <div class="main-heading">
-
-      <h1>
-        Result
-      </h1>
-
-      <p>
-        BADRUL HUDHA DA'AWA DARS
-      </p>
-
-    </div>
-
-
-    <!-- RESULT / GALLERY SLIDE -->
-
-    <div class="tabs">
-
-      <button
-        id="resultTab"
-        class="tab active"
-        onclick="showResultTab()"
-      >
-
-        Result
-
-      </button>
-
-      <button
-        id="galleryTab"
-        class="tab"
-        onclick="showGalleryTab()"
-      >
-
-        Gallery
-
-      </button>
-
-    </div>
-
-
-    <!-- =================================================
-         RESULT SECTION
-    ================================================= -->
-
-    <div
-      id="resultArea"
-      class="result-area"
-    >
-
-      <div class="category-box">
-
-        <label>
-          Select Category
-        </label>
-
-        <select
-          id="categorySelect"
-          class="category-select"
-          onchange="filterCompetitions()"
-        >
-
-          <option value="all">
-            All Categories
-          </option>
-
-          <option value="High Zone">
-            High Zone
-          </option>
-
-          <option value="Mid Zone">
-            Mid Zone
-          </option>
-
-          <option value="Low Zone">
-            Low Zone
-          </option>
-
-          <option value="General">
-            General
-          </option>
-
-        </select>
-
-      </div>
-
-
-      <div
-        id="competitionList"
-        class="competition-list"
-      ></div>
-
-    </div>
-
-
-    <!-- =================================================
-         GALLERY SECTION
-    ================================================= -->
-
-    <div
-      id="galleryArea"
-      class="gallery-area"
-    >
-
-
-      <!-- YOUTUBE LIVE -->
-
-      <div class="gallery-live">
-        
-        <div class="live-box">
-          
-          <div class="live-title">
-              <span class="live-dot"></span>
-               
-             Live
-          </div>
-          
-          <button class="youtube-button" onclick="openYouTube()">
-            ▶ YouTube Live
-          </button>
-
-        </div>
-      
-      </div>
-
-
-      <!-- PHOTO UPLOAD -->
-
-      <div class="gallery-upload">
-
-        <div class="upload-title">
-
-          Program Photos
-
-        </div>
-
-        <div class="upload-note">
-
-          ഇവിടെ program photos select ചെയ്യാം.
-
-        </div>
-
-
-        <div
-          id="photoGrid"
-          class="photo-grid"
-        ></div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-
-  <!-- FOOTER -->
-
-  <footer class="site-footer">
-
-    <div class="footer-name">
-      BADRUL HUDHA DA'AWA DARS
-    </div>
-
-    <div class="footer-phone">
-      +91 9496931381
-    </div>
-
-    <div class="footer-place">
-      Ziyarathingara &nbsp; Kanhanghad &nbsp; Kasaragod (dist)
-    </div>
-
-    <div class="ruvaissss">
-      Ruvaissss
-    </div>
-
-  </footer>
-
-</section>
-
-
-<!-- =====================================================
-     INDIVIDUAL COMPETITION RESULT PAGE
-===================================================== -->
-
-<section
-  id="competitionPage"
-  class="page"
->
-
-  <div class="competition-result-wrapper">
-
-
-    <!-- BACK -->
-
-    <button
-      class="back-main"
-      onclick="openMainPage()"
-    >
-
-      ← Back to Results
-
-    </button>
-
-
-    <div class="blue-card">
-
-
-      <!-- DOWNLOAD -->
-
-      <button
-        id="downloadButton"
-        class="download-button"
-        onclick="downloadResultPhoto()"
-      >
-
-        ↓ Download
-
-      </button>
-
-
-      <!-- COMPETITION TITLE -->
-
-      <div
-        id="competitionTitle"
-        class="comp-result-title"
-      >
-
-        Competition
-
-      </div>
-
-
-      <!-- WINNER POSITIONS -->
-
-      <div
-        id="winnerList"
-        class="winners"
-      >
-
-        <div class="winner">
-
-          <span class="rank">
-            1st
-          </span>
-
-          <span>
-            Result
-          </span>
-
-        </div>
-
-
-        <div class="winner">
-
-          <span class="rank">
-            2nd
-          </span>
-
-          <span>
-            Result
-          </span>
-
-        </div>
-
-
-        <div class="winner">
-
-          <span class="rank">
-            3rd
-          </span>
-
-          <span>
-            Result
-          </span>
-
-        </div>
-
-      </div>
-
-
-      <!-- =================================================
-           RESULT PHOTO PREVIEW — NEW PAGE
-      ================================================= -->
-
-      <div class="result-photo-area">
-
-        <div class="preview-label">
-
-          Result Preview
-
-        </div>
-
+    <div class="opening-content">
 
         <img
-          id="resultPhoto"
-          class="result-photo"
-          alt="Result Photo"
-        >
+            src="main-logo.png"
+            class="opening-logo"
+            alt="Main Logo">
 
+        <div class="swipe">
+
+            <div class="swipe-line"></div>
+
+            SWIPE TO ENTER
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     HOME PAGE
+================================================== -->
+
+<section
+    id="home"
+    class="page">
+
+    <div class="home-wrapper">
+
+        <div class="brand-box">
+
+            <div class="brand-logos">
+
+                <div class="logo-card">
+
+                    <img
+                        src="main-logo.png"
+                        alt="Main Logo">
+
+                </div>
+
+
+                <div class="logo-card">
+
+                    <img
+                        src="dars-logo.png"
+                        alt="Dars Logo">
+
+                </div>
+
+            </div>
+
+
+            <div class="brand-description">
+
+                DEDICATING
+                <span>
+                    BADRUL HUDHA DA'AWA DARS
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="home-result">
+
+            <button
+                class="result-home-button"
+                onclick="openMainPage()">
+
+                Result
+
+                <small>
+                    RESULTS & GALLERY
+                </small>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     RESULT / GALLERY PAGE
+================================================== -->
+
+<section
+    id="mainPage"
+    class="page">
+
+    <div class="main-wrapper">
+
+
+        <button
+            class="back-button"
+            onclick="goHome()">
+
+            ← Back
+
+        </button>
+
+
+        <div class="main-heading">
+
+            <h1>
+                Results
+            </h1>
+
+            <p>
+                BADRUL HUDHA DA'AWA DARS
+            </p>
+
+        </div>
+
+
+        <div class="tabs">
+
+            <button
+                id="resultTab"
+                class="tab active"
+                onclick="showResults()">
+
+                Result
+
+            </button>
+
+
+            <button
+                id="galleryTab"
+                class="tab"
+                onclick="showGallery()">
+
+                Gallery
+
+            </button>
+
+        </div>
+
+
+        <!-- RESULT AREA -->
 
         <div
-          id="notUploaded"
-          class="not-uploaded"
-        >
+            id="resultArea"
+            class="result-area">
 
-          Not uploaded, please wait...
+
+            <div class="category-box">
+
+                <label>
+                    Select Category
+                </label>
+
+                <select
+                    id="categorySelect"
+                    class="category-select"
+                    onchange="filterCompetitions()">
+
+                    <option value="all">
+                        All Competitions
+                    </option>
+
+                    <option value="high">
+                        High Zone
+                    </option>
+
+                    <option value="mid">
+                        Mid Zone
+                    </option>
+
+                    <option value="low">
+                        Low Zone
+                    </option>
+
+                    <option value="general">
+                        General
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div
+                id="competitionList"
+                class="competition-list">
+            </div>
 
         </div>
 
-      </div>
+
+        <!-- GALLERY AREA -->
+
+        <div
+            id="galleryArea"
+            class="gallery-area">
 
 
-      <!-- =================================================
-           RESULT PHOTO UPLOAD
-      ================================================= -->
+            <div class="gallery-live">
 
-      <div class="result-upload-box">
+                <div class="live-title">
 
-        <p>
-          Result preview
-        </p>
+                    <span class="live-dot"></span>
+
+                    LIVE
+
+                </div>
+
+
+                <div class="youtube-box">
+
+                    <a
+                        id="youtubeLink"
+                        class="youtube-link"
+                        href="#"
+                        target="_blank"
+                        rel="noopener">
+
+                        <span class="youtube-play"></span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="gallery-photos">
+
+                <div class="gallery-photo-title">
+                    Gallery
+                </div>
+
+                <div class="gallery-photo-subtitle">
+                    BADRUL HUDHA DA'AWA DARS
+                </div>
+
+
+                <div
+                    id="galleryGrid"
+                    class="photo-grid">
+                </div>
+
+            </div>
 
         </div>
 
-
     </div>
 
-  </div>
+
+    <!-- FOOTER -->
+
+    <footer class="site-footer">
+
+        <div class="footer-title">
+            BADRUL HUDHA DA'AWA DARS
+        </div>
+
+        <div class="footer-phone">
+            +91 9496931381
+        </div>
+
+        <div class="footer-location">
+            Ziyarathingara&nbsp;&nbsp;
+            Kanhanghad&nbsp;&nbsp;
+            Kasaragod(dist)
+        </div>
+
+        <div class="footer-credit">
+            Ruvaissss
+        </div>
+
+    </footer>
+
+</section>
 
 
-  <!-- FOOTER -->
+<!-- ==================================================
+     COMPETITION RESULT PAGE
+================================================== -->
 
-  <footer class="site-footer">
+<section
+    id="competitionPage"
+    class="page">
 
-    <div class="footer-name">
-      BADRUL HUDHA DA'AWA DARS
+    <div class="competition-result-wrapper">
+
+
+        <button
+            class="comp-back"
+            onclick="openMainPage()">
+
+            ← Back to Results
+
+        </button>
+
+
+        <div class="blue-card">
+
+
+            <button
+                id="topDownload"
+                class="download-button"
+                onclick="downloadResult()">
+
+                ↓ Download
+
+            </button>
+
+
+            <div
+                id="competitionTitle"
+                class="comp-result-title">
+
+                Result
+
+            </div>
+
+
+            <div
+                id="competitionSubtitle"
+                class="comp-result-subtitle">
+
+            </div>
+
+
+            <div
+                id="resultPhotoBox"
+                class="result-photo-box">
+
+                <img
+                    id="resultPhoto"
+                    class="result-photo hidden"
+                    src=""
+                    alt="Result">
+
+                <div
+                    id="noResultPhoto"
+                    class="not-uploaded">
+
+                    Result photo
+                    available soon.
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="winners"
+                class="winners">
+            </div>
+
+
+            <a
+                id="fullDownload"
+                class="full-download"
+                href="#"
+                download
+                style="display:none;">
+
+                ↓ Download Result Photo
+
+            </a>
+
+        </div>
+
     </div>
-
-    <div class="footer-phone">
-      +91 9496931381
-    </div>
-
-    <div class="footer-place">
-      Ziyarathingara &nbsp; Kanhanghad &nbsp; Kasaragod (dist)
-    </div>
-
-    <div class="ruvaissss">
-      Ruvaissss
-    </div>
-
-  </footer>
 
 </section><script>
 
-/* =====================================================
-   COMPETITIONS
-===================================================== */
+/* ==================================================
+   IMPORTANT SETTINGS
+================================================== */
+
+
+/*
+   YOUTUBE LINK
+
+   ഇവിടെ YouTube video/live link മാത്രം മാറ്റുക.
+
+   Example:
+
+   const youtubeURL =
+   "https://www.youtube.com/watch?v=XXXXXXXXXXX";
+
+   Link ഇല്ലെങ്കിൽ:
+
+   const youtubeURL = "";
+*/
+
+const youtubeURL = "";
+
+
+/* ==================================================
+   COMPETITION DATA
+
+   ഇവിടെ competition names മാറ്റാം.
+
+   zone:
+   high
+   mid
+   low
+   general
+
+   stage:
+   Stage
+   Off Stage
+================================================== */
 
 const competitions = [
 
-  {
-    key:"qiraath-high",
-    name:"Qira'ath",
-    type:"Stage",
-    zone:"High Zone"
-  },
+    {
+        id:"qiraath-high",
+        name:"Qira'ath",
+        zone:"high",
+        stage:"Stage",
+        photo:"",
+        winners:[]
+    },
 
-  {
-    key:"speech-high",
-    name:"Speech",
-    type:"Stage",
-    zone:"High Zone"
-  },
+    {
+        id:"speech-high",
+        name:"Speech",
+        zone:"high",
+        stage:"Stage",
+        photo:"",
+        winners:[]
+    },
 
-  {
-    key:"speech-low",
-    name:"Speech",
-    type:"Stage",
-    zone:"Low Zone"
-  },
+    {
+        id:"speech-low",
+        name:"Speech",
+        zone:"low",
+        stage:"Stage",
+        photo:"",
+        winners:[]
+    },
 
-  {
-    key:"madh-song-low",
-    name:"Madh Song",
-    type:"Stage",
-    zone:"Low Zone"
-  },
+    {
+        id:"madh-song",
+        name:"Madh Song",
+        zone:"low",
+        stage:"Stage",
+        photo:"",
+        winners:[]
+    },
 
-  {
-    key:"mothertunk-general",
-    name:"Mothertunk",
-    type:"Stage",
-    zone:"General"
-  },
+    {
+        id:"mothertunk",
+        name:"Mothertunk",
+        zone:"general",
+        stage:"Stage",
+        photo:"",
+        winners:[]
+    },
 
-  {
-    key:"essay-general",
-    name:"Essay",
-    type:"Off Stage",
-    zone:"General"
-  },
+    {
+        id:"essay",
+        name:"Essay",
+        zone:"general",
+        stage:"Off Stage",
+        photo:"",
+        winners:[]
+    },
 
-  {
-    key:"language-game-low",
-    name:"Language Game",
-    type:"Off Stage",
-    zone:"Low Zone"
-  },
+    {
+        id:"language-game",
+        name:"Language Game",
+        zone:"low",
+        stage:"Off Stage",
+        photo:"",
+        winners:[]
+    },
 
-  {
-    key:"qiraath-mid",
-    name:"Qira'ath",
-    type:"Off Stage",
-    zone:"Mid Zone"
-  },
+    {
+        id:"qiraath-mid",
+        name:"Qira'ath",
+        zone:"mid",
+        stage:"Off Stage",
+        photo:"",
+        winners:[]
+    },
 
-  {
-    key:"qiraath-low",
-    name:"Qira'ath",
-    type:"Off Stage",
-    zone:"Low Zone"
-  },
+    {
+        id:"qiraath-low",
+        name:"Qira'ath",
+        zone:"low",
+        stage:"Off Stage",
+        photo:"",
+        winners:[]
+    },
 
-  {
-    key:"exam-high",
-    name:"Exam Results",
-    type:"Off Stage",
-    zone:"High Zone"
-  },
+    {
+        id:"exam-high",
+        name:"Exam Results",
+        zone:"high",
+        stage:"Off Stage",
+        photo:"",
+        winners:[]
+    },
 
-  {
-    key:"exam-mid",
-    name:"Exam Results",
-    type:"Off Stage",
-    zone:"Mid Zone"
-  },
+    {
+        id:"exam-mid",
+        name:"Exam Results",
+        zone:"mid",
+        stage:"Off Stage",
+        photo:"",
+        winners:[]
+    },
 
-  {
-    key:"exam-low",
-    name:"Exam Results",
-    type:"Off Stage",
-    zone:"Low Zone"
-  }
+    {
+        id:"exam-low",
+        name:"Exam Results",
+        zone:"low",
+        stage:"Off Stage",
+        photo:"",
+        winners:[]
+    }
 
 ];
 
 
-/* =====================================================
-   RESULT DATA
-===================================================== */
-
-/*
-  ഇവിടെ ഓരോ competition-ന്റെയും result
-  പിന്നീട് update ചെയ്യാം.
-
-  ഇപ്പോൾ upload ചെയ്തിട്ടില്ലെങ്കിൽ:
-
-  Not uploaded, please wait...
-
-  എന്ന് കാണിക്കും.
-*/
-
-const resultData = {
-
-  "qiraath-high":{
-    first:"",
-    second:"",
-    third:"",
-    photo:""
-  },
-
-  "speech-high":{
-    first:"",
-    second:"",
-    third:"",
-    photo:""
-  },
-
-  "speech-low":{
-    first:"",
-    second:"",
-    third:"",
-    photo:""
-  },
-
-  "madh-song-low":{
-    first:"",
-    second:"",
-    third:"",
-    photo:""
-  },
-
-  "mothertunk-general":{
-    first:"",
-    second:"",
-    third:"",
-    photo:""
-  },
-
-  "essay-general":{
-    first:"",
-    second:"",
-    third:"",
-    photo:""
-  },
-
-  "language-game-low":{
-    first:"",
-    second:"",
-    third:"",
-    photo:""
-  },
-
-  "qiraath-mid":{
-    first:"",
-    second:"",
-    third:"",
-    photo:""
-  },
-
-  "qiraath-low":{
-    first:"",
-    second:"",
-    third:"",
-    photo:""
-  },
-
-  "exam-high":{
-    first:"",
-    second:"",
-    third:"",
-    photo:""
-  },
-
-  "exam-mid":{
-    first:"",
-    second:"",
-    third:"",
-    photo:""
-  },
-
-  "exam-low":{
-    first:"",
-    second:"",
-    third:"",
-    photo:""
-  }
-
-};
-
-
-/* =====================================================
-   CURRENT COMPETITION
-===================================================== */
-
-let currentCompetition = null;
-
-let currentResultURL = null;
-
-
-/* =====================================================
+/* ==================================================
    OPENING → HOME
-===================================================== */
+================================================== */
 
-function openHome(){
+const opening =
+document.getElementById("opening");
 
-  document
-    .getElementById("opening")
-    .style.transform =
-    "translateY(-100%)";
+let opened = false;
 
-  document
-    .getElementById("home")
-    .classList.add("active");
 
-  document
-    .getElementById("mainPage")
-    .classList.remove("active");
+function enterSite(){
 
-  document
-    .getElementById("competitionPage")
-    .classList.remove("active");
+    if(opened) return;
 
-  window.scrollTo(0,0);
-}
+    opened = true;
 
+    opening.style.transform =
+        "translateY(-100%)";
 
-/* =====================================================
-   OPEN HOME
-===================================================== */
+    setTimeout(function(){
 
-function showHome(){
+        opening.style.display =
+            "none";
 
-  document
-    .getElementById("opening")
-    .style.transform =
-    "translateY(-100%)";
+        document
+            .getElementById("home")
+            .classList.add("active");
 
-  document
-    .getElementById("home")
-    .classList.add("active");
-
-  document
-    .getElementById("mainPage")
-    .classList.remove("active");
-
-  document
-    .getElementById("competitionPage")
-    .classList.remove("active");
-
-  window.scrollTo(0,0);
-}
-
-
-/* =====================================================
-   OPEN MAIN RESULT PAGE
-===================================================== */
-
-function openMainPage(){
-
-  document
-    .getElementById("opening")
-    .style.transform =
-    "translateY(-100%)";
-
-  document
-    .getElementById("home")
-    .classList.remove("active");
-
-  document
-    .getElementById("competitionPage")
-    .classList.remove("active");
-
-  document
-    .getElementById("mainPage")
-    .classList.add("active");
-
-  showResultTab();
-
-  window.scrollTo(0,0);
-}
-
-
-/* =====================================================
-   OPEN INDIVIDUAL COMPETITION PAGE
-===================================================== */
-
-function openCompetition(key){
-
-  currentCompetition =
-    competitions.find(
-      item => item.key === key
-    );
-
-  if(!currentCompetition){
-    return;
-  }
-
-
-  currentResultURL = null;
-
-
-  document
-    .getElementById("mainPage")
-    .classList.remove("active");
-
-  document
-    .getElementById("home")
-    .classList.remove("active");
-
-  document
-    .getElementById("competitionPage")
-    .classList.add("active");
-
-
-  document
-    .getElementById("competitionTitle")
-    .textContent =
-    currentCompetition.name;
-
-
-  const data =
-    resultData[currentCompetition.key];
-
-
-  /* =========================
-     WINNERS
-  ========================= */
-
-  document
-    .getElementById("winnerList")
-    .innerHTML = `
-
-      <div class="winner">
-
-        <span class="rank">
-          1st
-        </span>
-
-        <span>
-          ${
-            data.first ||
-            "Not uploaded"
-          }
-        </span>
-
-      </div>
-
-
-      <div class="winner">
-
-        <span class="rank">
-          2nd
-        </span>
-
-        <span>
-          ${
-            data.second ||
-            "Not uploaded"
-          }
-        </span>
-
-      </div>
-
-
-      <div class="winner">
-
-        <span class="rank">
-          3rd
-        </span>
-
-        <span>
-          ${
-            data.third ||
-            "Not uploaded"
-          }
-        </span>
-
-      </div>
-
-    `;
-
-
-  /* =========================
-     RESULT PHOTO
-  ========================= */
-
-  const photo =
-    document.getElementById(
-      "resultPhoto"
-    );
-
-  const notUploaded =
-    document.getElementById(
-      "notUploaded"
-    );
-
-
-  if(data.photo){
-
-    photo.src =
-      data.photo;
-
-    photo.style.display =
-      "block";
-
-    notUploaded.style.display =
-      "none";
-
-    currentResultURL =
-      data.photo;
-
-  }else{
-
-    photo.src = "";
-
-    photo.style.display =
-      "none";
-
-    notUploaded.style.display =
-      "flex";
-
-  }
-
-
-  /*
-    Upload input reset ചെയ്യുന്നു.
-    അതുകൊണ്ട് പുതിയ competition-ൽ
-    പഴയ selected file കാണിക്കില്ല.
-  */
-
-  document
-    .getElementById("resultFile")
-    .value = "";
-
-
-  window.scrollTo(0,0);
+    },1000);
 
 }
 
 
-/* =====================================================
-   FILTER COMPETITIONS
-===================================================== */
+/* CLICK / SWIPE */
 
-function filterCompetitions(){
+opening.addEventListener(
+    "click",
+    enterSite
+);
 
-  const selected =
-    document
-      .getElementById("categorySelect")
-      .value;
-
-
-  const list =
-    document
-      .getElementById("competitionList");
-
-
-  let filtered;
-
-
-  if(selected === "all"){
-
-    filtered =
-      competitions;
-
-  }else{
-
-    filtered =
-      competitions.filter(
-        item =>
-          item.zone === selected
-      );
-
-  }
-
-
-  list.innerHTML = "";
-
-
-  filtered.forEach(item => {
-
-    const card =
-      document.createElement("div");
-
-
-    card.className =
-      "competition";
-
-
-    card.onclick = function(){
-
-      openCompetition(
-        item.key
-      );
-
-    };
-
-
-    card.innerHTML = `
-
-      <div class="competition-info">
-
-        <span class="stage-label">
-          ${item.type}
-        </span>
-
-        <div class="competition-name">
-          ${item.name}
-        </div>
-
-      </div>
-
-
-      <div class="zone-badge">
-        ${item.zone}
-      </div>
-
-    `;
-
-
-    list.appendChild(card);
-
-  });
-
-}
-
-
-/* =====================================================
-   RESULT TAB
-===================================================== */
-
-function showResultTab(){
-
-  document
-    .getElementById("resultArea")
-    .style.display =
-    "block";
-
-  document
-    .getElementById("galleryArea")
-    .style.display =
-    "none";
-
-
-  document
-    .getElementById("resultTab")
-    .classList.add("active");
-
-  document
-    .getElementById("galleryTab")
-    .classList.remove("active");
-
-}
-
-
-/* =====================================================
-   GALLERY TAB
-===================================================== */
-
-function showGalleryTab(){
-
-  document
-    .getElementById("resultArea")
-    .style.display =
-    "none";
-
-  document
-    .getElementById("galleryArea")
-    .style.display =
-    "block";
-
-
-  document
-    .getElementById("resultTab")
-    .classList.remove("active");
-
-  document
-    .getElementById("galleryTab")
-    .classList.add("active");
-
-}
-
-
-/* =====================================================
-   RESULT PHOTO PREVIEW
-===================================================== */
-
-function previewResult(event){
-
-  const file =
-    event.target.files[0];
-
-  if(!file){
-    return;
-  }
-
-
-  const reader =
-    new FileReader();
-
-
-  reader.onload =
-    function(e){
-
-      const photo =
-        document.getElementById(
-          "resultPhoto"
-        );
-
-      const notUploaded =
-        document.getElementById(
-          "notUploaded"
-        );
-
-
-      photo.src =
-        e.target.result;
-
-      photo.style.display =
-        "block";
-
-      notUploaded.style.display =
-        "none";
-
-
-      currentResultURL =
-        e.target.result;
-
-
-      /*
-        IMPORTANT:
-
-        ഇത് ഇപ്പോഴത്തെ browser session-ൽ
-        preview കാണിക്കും.
-
-        Permanent website update വേണമെങ്കിൽ
-        ഈ photo file GitHub-ലേക്ക് upload
-        ചെയ്ത് resultData-യിലെ photo path
-        മാറ്റണം.
-      */
-
-      if(currentCompetition){
-
-        resultData[
-          currentCompetition.key
-        ].photo =
-          e.target.result;
-
-      }
-
-    };
-
-
-  reader.readAsDataURL(file);
-
-}
-
-
-/* =====================================================
-   DOWNLOAD RESULT PHOTO
-===================================================== */
-
-function downloadResultPhoto(){
-
-  if(!currentResultURL){
-
-    alert(
-      "Result photo ഇതുവരെ upload ചെയ്തിട്ടില്ല."
-    );
-
-    return;
-  }
-
-
-  const link =
-    document.createElement("a");
-
-
-  link.href =
-    currentResultURL;
-
-  link.download =
-    (
-      currentCompetition
-        ? currentCompetition.name
-        : "result"
-    )
-    .replace(/\s+/g,"-")
-    + "-result.jpg";
-
-
-  document.body.appendChild(link);
-
-  link.click();
-
-  link.remove();
-
-}
-
-
-/* =====================================================
-   YOUTUBE
-===================================================== */
-
-function openYouTube(){
-
-  const input =
-    document
-      .getElementById("youtubeLink")
-      .value
-      .trim();
-
-
-  if(!input){
-
-    alert(
-      "YouTube link ആദ്യം paste ചെയ്യുക."
-    );
-
-    return;
-  }
-
-
-  window.open(
-    input,
-    "_blank"
-  );
-
-}
-
-
-/* =====================================================
-   GALLERY PHOTO PREVIEW
-===================================================== */
-
-function previewGallery(event){
-
-  const files =
-    Array.from(
-      event.target.files
-    );
-
-
-  const grid =
-    document.getElementById(
-      "photoGrid"
-    );
-
-
-  grid.innerHTML = "";
-
-
-  files.forEach(file => {
-
-    const reader =
-      new FileReader();
-
-
-    reader.onload =
-      function(e){
-
-        const img =
-          document.createElement("img");
-
-        img.src =
-          e.target.result;
-
-        img.alt =
-          "Program Photo";
-
-        grid.appendChild(img);
-
-      };
-
-
-    reader.readAsDataURL(file);
-
-  });
-
-}
-
-
-/* =====================================================
-   SWIPE OPENING
-===================================================== */
 
 let touchStartY = 0;
 
-let touchEndY = 0;
 
+opening.addEventListener(
+    "touchstart",
+    function(e){
 
-document.addEventListener(
-  "touchstart",
-  function(event){
+        touchStartY =
+            e.touches[0].clientY;
 
-    touchStartY =
-      event.changedTouches[0].screenY;
-
-  },
-  {passive:true}
+    }
 );
 
 
-document.addEventListener(
-  "touchend",
-  function(event){
+opening.addEventListener(
+    "touchend",
+    function(e){
 
-    touchEndY =
-      event.changedTouches[0].screenY;
+        let touchEndY =
+            e.changedTouches[0].clientY;
 
+        if(
+            touchStartY -
+            touchEndY >
+            40
+        ){
 
-    const difference =
-      touchStartY -
-      touchEndY;
+            enterSite();
 
-
-    /*
-      Opening page-ൽ മാത്രം
-      swipe up ചെയ്താൽ Home.
-    */
-
-    const opening =
-      document.getElementById(
-        "opening"
-      );
-
-
-    if(
-      opening &&
-      opening.style.transform !==
-      "translateY(-100%)" &&
-      difference > 60
-    ){
-
-      openHome();
+        }
 
     }
-
-  },
-  {passive:true}
 );
 
 
-/* =====================================================
-   OPENING CLICK / TOUCH
-===================================================== */
+/* ==================================================
+   HOME
+================================================== */
 
-document
-  .getElementById("opening")
-  .addEventListener(
-    "click",
-    function(){
-
-      openHome();
-
-    }
-  );
-
-
-/* =====================================================
-   INITIAL LOAD
-===================================================== */
-
-document.addEventListener(
-  "DOMContentLoaded",
-  function(){
-
-    /*
-      Opening മാത്രം ആദ്യം കാണിക്കും.
-    */
+function openMainPage(){
 
     document
-      .getElementById("home")
-      .classList.remove("active");
+        .getElementById("home")
+        .classList.remove("active");
 
     document
-      .getElementById("mainPage")
-      .classList.remove("active");
+        .getElementById("competitionPage")
+        .classList.remove("active");
 
     document
-      .getElementById("competitionPage")
-      .classList.remove("active");
+        .getElementById("mainPage")
+        .classList.add("active");
 
+    window.scrollTo(0,0);
+
+    showResults();
 
     filterCompetitions();
 
-  }
-);
+}
+
+
+function goHome(){
+
+    document
+        .getElementById("mainPage")
+        .classList.remove("active");
+
+    document
+        .getElementById("competitionPage")
+        .classList.remove("active");
+
+    document
+        .getElementById("home")
+        .classList.add("active");
+
+    window.scrollTo(0,0);
+
+}
+
+
+/* ==================================================
+   RESULT / GALLERY
+================================================== */
+
+function showResults(){
+
+    document
+        .getElementById("resultArea")
+        .style.display="block";
+
+    document
+        .getElementById("galleryArea")
+        .style.display="none";
+
+
+    document
+        .getElementById("resultTab")
+        .classList.add("active");
+
+    document
+        .getElementById("galleryTab")
+        .classList.remove("active");
+
+}
+
+
+function showGallery(){
+
+    document
+        .getElementById("resultArea")
+        .style.display="none";
+
+    document
+        .getElementById("galleryArea")
+        .style.display="block";
+
+
+    document
+        .getElementById("resultTab")
+        .classList.remove("active");
+
+    document
+        .getElementById("galleryTab")
+        .classList.add("active");
+
+    loadGallery();
+
+}
+
+
+/* ==================================================
+   COMPETITION LIST
+================================================== */
+
+function filterCompetitions(){
+
+    const selected =
+        document
+        .getElementById("categorySelect")
+        .value;
+
+    const list =
+        document
+        .getElementById("competitionList");
+
+    list.innerHTML="";
+
+
+    competitions
+    .filter(function(comp){
+
+        if(selected==="all"){
+            return true;
+        }
+
+        return comp.zone===selected;
+
+    })
+    .forEach(function(comp){
+
+        const item =
+        document.createElement("div");
+
+        item.className =
+            "competition";
+
+        item.onclick=function(){
+
+            openCompetition(comp.id);
+
+        };
+
+
+        item.innerHTML=`
+
+            <div class="competition-info">
+
+                <span class="stage-label">
+                    ${comp.stage}
+                </span>
+
+                <div class="competition-name">
+                    ${comp.name}
+                </div>
+
+            </div>
+
+            <div class="zone-badge">
+                ${zoneName(comp.zone)}
+            </div>
+
+        `;
+
+
+        list.appendChild(item);
+
+    });
+
+}
+
+
+/* ==================================================
+   ZONE NAME
+================================================== */
+
+function zoneName(zone){
+
+    if(zone==="high")
+        return "HIGH ZONE";
+
+    if(zone==="mid")
+        return "MID ZONE";
+
+    if(zone==="low")
+        return "LOW ZONE";
+
+    if(zone==="general")
+        return "GENERAL";
+
+    return "";
+
+}
+
+
+/* ==================================================
+   OPEN COMPETITION
+================================================== */
+
+let currentCompetition = null;
+
+
+function openCompetition(id){
+
+    const comp =
+        competitions.find(
+            function(item){
+                return item.id===id;
+            }
+        );
+
+    if(!comp) return;
+
+    currentCompetition = comp;
+
+
+    document
+        .getElementById("mainPage")
+        .classList.remove("active");
+
+    document
+        .getElementById("home")
+        .classList.remove("active");
+
+    document
+        .getElementById("competitionPage")
+        .classList.add("active");
+
+
+    document
+        .getElementById("competitionTitle")
+        .textContent =
+            comp.name;
+
+
+    document
+        .getElementById("competitionSubtitle")
+        .textContent =
+            comp.stage +
+            "  •  " +
+            zoneName(comp.zone);
+
+
+    loadResultPhoto(comp);
+
+    loadWinners(comp);
+
+    window.scrollTo(0,0);
+
+}
+
+
+/* ==================================================
+   RESULT PHOTO
+================================================== */
+
+function loadResultPhoto(comp){
+
+    const photo =
+        document
+        .getElementById("resultPhoto");
+
+    const noPhoto =
+        document
+        .getElementById("noResultPhoto");
+
+    const download =
+        document
+        .getElementById("fullDownload");
+
+
+    if(comp.photo){
+
+        photo.src =
+            comp.photo;
+
+        photo.classList.remove("hidden");
+
+        noPhoto.style.display =
+            "none";
+
+        download.href =
+            comp.photo;
+
+        download.style.display =
+            "inline-block";
+
+    }
+
+    else{
+
+        photo.src="";
+
+        photo.classList.add("hidden");
+
+        noPhoto.style.display =
+            "block";
+
+        download.style.display =
+            "none";
+
+    }
+
+}
+
+
+/* ==================================================
+   WINNERS
+================================================== */
+
+function loadWinners(comp){
+
+    const container =
+        document
+        .getElementById("winners");
+
+    container.innerHTML="";
+
+
+    if(
+        !comp.winners ||
+        comp.winners.length===0
+    ){
+
+        return;
+
+    }
+
+
+    comp.winners.forEach(
+        function(person,index){
+
+            const winner =
+                document.createElement("div");
+
+            winner.className =
+                "winner";
+
+
+            winner.innerHTML=`
+
+                <div class="winner-rank">
+                    ${index+1}
+                </div>
+
+                <div class="winner-name">
+                    ${person}
+                </div>
+
+            `;
+
+
+            container.appendChild(winner);
+
+        }
+    );
+
+}
+
+
+/* ==================================================
+   DOWNLOAD
+================================================== */
+
+function downloadResult(){
+
+    if(
+        currentCompetition &&
+        currentCompetition.photo
+    ){
+
+        const link =
+            document.createElement("a");
+
+        link.href =
+            currentCompetition.photo;
+
+        link.download =
+            currentCompetition.name
+            + "-result";
+
+        document.body.appendChild(link);
+
+        link.click();
+
+        document.body.removeChild(link);
+
+    }
+
+}
+
+
+/* ==================================================
+   YOUTUBE
+================================================== */
+
+function loadYoutube(){
+
+    const link =
+        document
+        .getElementById("youtubeLink");
+
+
+    if(youtubeURL){
+
+        link.href =
+            youtubeURL;
+
+        link.style.opacity="1";
+
+        link.style.pointerEvents =
+            "auto";
+
+    }
+
+    else{
+
+        link.href="#";
+
+        link.style.opacity=".45";
+
+        link.style.pointerEvents =
+            "none";
+
+    }
+
+}
+
+
+/* ==================================================
+   GALLERY PHOTOS
+==================================================
+
+   ഇവിടെ photo filenames ചേർക്കുക.
+
+   Example:
+
+   const galleryPhotos = [
+       "gallery1.jpg",
+       "gallery2.jpg",
+       "gallery3.jpg"
+   ];
+
+*/
+
+const galleryPhotos = [
+
+    /*
+    "gallery1.jpg",
+    "gallery2.jpg",
+    "gallery3.jpg"
+    */
+
+];
+
+
+function loadGallery(){
+
+    loadYoutube();
+
+
+    const grid =
+        document
+        .getElementById("galleryGrid");
+
+    grid.innerHTML="";
+
+
+    if(galleryPhotos.length===0){
+
+        grid.innerHTML=`
+
+            <div
+                class="empty-gallery"
+                style="grid-column:1/-1;">
+
+                Photos will be added soon.
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    galleryPhotos.forEach(
+        function(photo){
+
+            const img =
+                document.createElement("img");
+
+            img.src=photo;
+
+            img.alt="Gallery Photo";
+
+            grid.appendChild(img);
+
+        }
+    );
+
+}
+
+
+/* ==================================================
+   START
+================================================== */
+
+filterCompetitions();
+
+loadYoutube();
 
 </script>
 
